@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletronica Cobra</title>
     <link rel="stylesheet" href="styles/index.css">
+    <!-- criar script para style responsivo -->
     <link rel="icon" type="image/png" href="img_padrao/mascote_cobra.png">
 </head>
 
@@ -20,28 +21,130 @@
 
             <div class="barra_pesquisa">
                 <div class="box_pesquisa">
+                    <img src="icons/lupa.png" alt="Ícone de lupa" class="icon_pesquisa" width="20" height="20">
                     <input type="text" placeholder="Buscar guitarras, baterias, teclados...">
                 </div>
             </div>
 
             <div class="menu">
-                <nav class="nav">  <!-- depois linkar com as classes respectivas-->
+                <nav class="nav"> <!-- depois linkar com as classes respectivas-->
                     <a href="#">Início</a>
                     <a href="#">Produtos</a>
                     <a href="#">Sobre</a>
                     <a href="#">Contato</a>
                 </nav>
 
-                <button class="carrinho" type="button"> <!-- colocar o icon de um carrinho no lugar da palavra-->
-                    Carrinho 
+                <button class="btn_header" type="button">
+                    <img src="icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
+                    Carrinho
+                </button>
+
+                <button class="btn_header" type="button">
+                    <img src="icons/login.png" alt="Ícone do login" width="20" height="20">
+                    <!-- Login -->
                 </button>
             </div>
         </div>
     </header>
+
+
+    <!-- ARRUMAR O FOOTER -->
+    <!-- ajeitar a formatação das coisas q ja tem e os nomes e o css -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <div class="footer-grid">
+
+                <!-- COL 1: Brand -->
+                <div class="footer-col">
+                    <a class="footer-brand" href="#">
+                        <span class="footer-brand__icon" aria-hidden="true">♪</span>
+                        <span class="footer-brand__name">ELETRÔNICA <b>COBRA</b></span>
+                    </a>
+
+                    <p class="footer-text">
+                        Sua loja de confiança para instrumentos musicais há mais de 40 anos.
+                    </p>
+
+                    <div class="footer-social">
+                        <a class="social-btn" href="#" aria-label="Instagram" title="Instagram">IG</a>
+                        <a class="social-btn" href="#" aria-label="Facebook" title="Facebook">FB</a>
+                        <a class="social-btn" href="#" aria-label="YouTube" title="YouTube">YT</a>
+                        <a class="social-btn" href="#" aria-label="TikTok" title="TikTok">TT</a>
+                    </div>
+                </div>
+
+                <!-- COL 2: Links rápidos + Legal -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+
+                    <h4 class="footer-title footer-title--spaced">Políticas</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Garantia</a></li>
+                    </ul>
+                </div>
+
+                <!-- COL 3: Categorias + Pagamentos -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Categorias</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Guitarras</a></li>
+                        <li><a href="#">Baixos</a></li>
+                        <li><a href="#">Baterias</a></li>
+                        <li><a href="#">Teclados</a></li>
+                        <li><a href="#">Áudio</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+
+                    <h4 class="footer-title footer-title--spaced">Formas de Pagamento</h4>
+                    <div class="footer-payments" aria-label="Formas de pagamento">
+                        <span class="pay-badge" title="PIX">PIX</span>
+                        <span class="pay-badge" title="Boleto">Boleto</span>
+                        <span class="pay-badge" title="Crédito">Crédito</span>
+                        <span class="pay-badge" title="Débito">Débito</span>
+                        <span class="pay-badge" title="Parcelamento">12x</span>
+                    </div>
+                </div>
+
+                <!-- COL 4: Funcionamento + Contato + Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Horário de Funcionamento</h4>
+                    <ul class="footer-list footer-list--plain">
+                        <li>Segunda a Sexta: 9h - 19h</li>
+                        <li>Sábado: 9h - 17h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+
+                    <h4 class="footer-title footer-title--spaced">Contato</h4>
+                    <ul class="footer-list footer-list--plain">
+                        <li>📍 Rua Exemplo, 123 — Centro</li>
+                        <li>📞 (11) 99999-9999</li>
+                        <li>✉️ contato@eletronicacobra.com.br</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="linha_footer">
+
+            <div class="footer-bottom">
+                <p>© 2026 Eletrônica Cobra. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
 </body>
 
 </html>
-
-<!-- continuar o body da pagina -->
-
-<!-- ARRUMAR O CSS PARA FUNCIONAR PARA PC, TABLET E CELULAR -->

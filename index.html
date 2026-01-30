@@ -48,8 +48,101 @@
     </header>
 
 
-    <!-- ARRUMAR O FOOTER -->
-    <!-- ajeitar a formatação das coisas q ja tem e os nomes e o css -->
+
+
+
+
+
+
+
+
+    <section class="contact-section" id="contato">
+        <div class="contact-wrap">
+            <div class="contact-grid">
+
+                <!-- contato esquerda (mapa) -->
+                <div>
+                    <h2 class="contact-title">Entre em <span>Contato</span></h2>
+                    <p class="contact-subtitle">
+                        Estamos prontos para ajudar você a encontrar o instrumento perfeito!
+                        Visite nossa loja ou envie uma mensagem.
+                    </p>
+
+                    <div class="mapa_container">
+                        <div class="map-top">
+                            <div class="map-badge">Nossa loja</div>
+                            <a class="map-link" href="#" target="_blank" rel="noopener">
+                                Abrir no Google Maps →
+                            </a>
+                        </div>
+
+                        <div class="mapa">
+                            <iframe title="Mapa da loja Eletrônica Cobra"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.65935585806!2d-52.2725839!3d-27.6350649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e3138a6bcd1dd9%3A0xf24c998ece4995bc!2sCobra%20Instrumentos%20Musicais%20e%20Eletr%C3%B4nica!5e0!3m2!1spt-BR!2sbr!4v1769733603501!5m2!1spt-BR!2sbr">
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="map-bottom">
+                        <div class="map-actions">
+                            <a class="btn-solid" href="#" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- contato direita (formulário) -->
+                <div>
+                    <div class="form-card">
+                        <h3>Envie uma mensagem</h3>
+
+                        <form action="#" method="post" class="contact-form">
+                            <label>
+                                Nome
+                                <input type="text" name="nome" placeholder="Seu nome" required>
+                            </label>
+
+                            <label>
+                                Email
+                                <input type="email" name="email" placeholder="exemplo@email.com" required>
+                            </label>
+
+                            <label>
+                                Telefone
+                                <input type="tel" name="telefone" placeholder="(54) 99999-9999">
+                            </label>
+
+                            <label>
+                                Mensagem
+                                <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?"
+                                    required></textarea>
+                            </label>
+
+                            <button type="submit" class="btn-send">Enviar Mensagem</button>
+                        </form>
+
+                        <p class="form-note">
+                            Responderemos o mais rápido possível em horário comercial.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -68,10 +161,15 @@
                     </p>
 
                     <div class="footer-social">
-                        <a class="social-btn" href="#" aria-label="Instagram" title="Instagram">IG</a>
-                        <a class="social-btn" href="#" aria-label="Facebook" title="Facebook">FB</a>
-                        <a class="social-btn" href="#" aria-label="YouTube" title="YouTube">YT</a>
-                        <a class="social-btn" href="#" aria-label="TikTok" title="TikTok">TT</a>
+                        <a href="https://www.instagram.com/cobrainstrumentosmusicais/" target="_blank" rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/instagram.png" alt="Ícone do Instagram" width="40" height="40">
+                        </a>
+                        <a href="#" target="_blank" rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/facebook.png" alt="Ícone do Facebook" width="40" height="40">
+                        </a>
+                        <a href="#" target="_blank" rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/tiktok.png" alt="Ícone do TikTok" width="40" height="40">
+                        </a>
                     </div>
                 </div>
 
@@ -84,17 +182,9 @@
                         <li><a href="#">Sobre Nós</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
-
-                    <h4 class="footer-title footer-title--spaced">Políticas</h4>
-                    <ul class="footer-list">
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Trocas e Devoluções</a></li>
-                        <li><a href="#">Garantia</a></li>
-                    </ul>
                 </div>
 
-                <!-- COL 3: Categorias + Pagamentos -->
+                <!-- COL 3: Categorias -->
                 <div class="footer-col">
                     <h4 class="footer-title">Categorias</h4>
                     <ul class="footer-list">
@@ -105,39 +195,41 @@
                         <li><a href="#">Áudio</a></li>
                         <li><a href="#">Acessórios</a></li>
                     </ul>
-
-                    <h4 class="footer-title footer-title--spaced">Formas de Pagamento</h4>
-                    <div class="footer-payments" aria-label="Formas de pagamento">
-                        <span class="pay-badge" title="PIX">PIX</span>
-                        <span class="pay-badge" title="Boleto">Boleto</span>
-                        <span class="pay-badge" title="Crédito">Crédito</span>
-                        <span class="pay-badge" title="Débito">Débito</span>
-                        <span class="pay-badge" title="Parcelamento">12x</span>
-                    </div>
                 </div>
 
-                <!-- COL 4: Funcionamento + Contato + Newsletter -->
+                <!-- COL 4: Funcionamento -->
                 <div class="footer-col">
                     <h4 class="footer-title">Horário de Funcionamento</h4>
                     <ul class="footer-list footer-list--plain">
-                        <li>Segunda a Sexta: 9h - 19h</li>
-                        <li>Sábado: 9h - 17h</li>
+                        <li>Segunda a Sexta: 08:30h - 12h | 13:30h - 18h</li>
+                        <li>Sábado: 8h - 12h</li>
                         <li>Domingo: Fechado</li>
-                    </ul>
-
-                    <h4 class="footer-title footer-title--spaced">Contato</h4>
-                    <ul class="footer-list footer-list--plain">
-                        <li>📍 Rua Exemplo, 123 — Centro</li>
-                        <li>📞 (11) 99999-9999</li>
-                        <li>✉️ contato@eletronicacobra.com.br</li>
                     </ul>
                 </div>
 
+                <!-- COL 5: Contato + Pagamento -->
+                <div class="footer-col">
+                    <h4 class="footer-title footer-title--spaced">Contato</h4>
+                    <ul class="footer-list footer-list--plain">
+                        <li>Av. Comandante Kramer, 78 - Centro, Erechim - RS</li>
+                        <li>(54) 3321-3833</li>
+                        <li></li>
+                    </ul>
+
+                    <h4 class="footer-title footer-title--spaced">Formas de Pagamento</h4>
+                    <div class="footer-payments" aria-label="Formas de pagamento">
+                        <span class="icon_pagamento_footer" title="PIX">PIX</span>
+                        <span class="icon_pagamento_footer" title="Boleto">Boleto</span>
+                        <span class="icon_pagamento_footer" title="Crédito">Crédito</span>
+                        <span class="icon_pagamento_footer" title="Débito">Débito</span>
+                        <span class="icon_pagamento_footer" title="Parcelamento">12x</span>
+                    </div>
+                </div>
             </div>
 
             <hr class="linha_footer">
 
-            <div class="footer-bottom">
+            <div class="direitos_footer">
                 <p>© 2026 Eletrônica Cobra. Todos os direitos reservados.</p>
             </div>
         </div>

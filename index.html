@@ -11,7 +11,14 @@
 </head>
 
 <body>
+    <!-- CABEÇALHO -->
     <header class="header">
+        <div class="top_promo" id="topPromo">
+            <a class="promo_text">
+                Pague com <strong>PIX</strong> ou <strong>Cartão</strong> em até <strong>10x</strong> sem juros
+            </a>
+        </div>
+
         <div class="header_container">
             <a class="logo">
                 <div>
@@ -30,8 +37,8 @@
                 <nav class="nav"> <!-- depois linkar com as classes respectivas-->
                     <a href="#">Início</a>
                     <a href="#">Produtos</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
                 </nav>
 
                 <button class="btn_header" type="button">
@@ -51,82 +58,10 @@
 
 
 
-
-
-
-
-
-    <section class="contact-section" id="contato">
-        <div class="contact-wrap">
-            <div class="contact-grid">
-
-                <!-- contato esquerda (mapa) -->
-                <div>
-                    <h2 class="contact-title">Entre em <span>Contato</span></h2>
-                    <p class="contact-subtitle">
-                        Estamos prontos para ajudar você a encontrar o instrumento perfeito!
-                        Visite nossa loja ou envie uma mensagem.
-                    </p>
-
-                    <div class="mapa_container">
-                        <div class="map-top">
-                            <div class="map-badge">Nossa loja</div>
-                            <a class="map-link" href="#" target="_blank" rel="noopener">
-                                Abrir no Google Maps →
-                            </a>
-                        </div>
-
-                        <div class="mapa">
-                            <iframe title="Mapa da loja Eletrônica Cobra"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.65935585806!2d-52.2725839!3d-27.6350649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e3138a6bcd1dd9%3A0xf24c998ece4995bc!2sCobra%20Instrumentos%20Musicais%20e%20Eletr%C3%B4nica!5e0!3m2!1spt-BR!2sbr!4v1769733603501!5m2!1spt-BR!2sbr">
-                            </iframe>
-                        </div>
-
-                    </div>
-
-                    <div class="map-bottom">
-                        <div class="map-actions">
-                            <a class="btn-solid" href="#" target="_blank" rel="noopener">WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- contato direita (formulário) -->
-                <div>
-                    <div class="form-card">
-                        <h3>Envie uma mensagem</h3>
-
-                        <form action="#" method="post" class="contact-form">
-                            <label>
-                                Nome
-                                <input type="text" name="nome" placeholder="Seu nome" required>
-                            </label>
-
-                            <label>
-                                Email
-                                <input type="email" name="email" placeholder="exemplo@email.com" required>
-                            </label>
-
-                            <label>
-                                Telefone
-                                <input type="tel" name="telefone" placeholder="(54) 99999-9999">
-                            </label>
-
-                            <label>
-                                Mensagem
-                                <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?"
-                                    required></textarea>
-                            </label>
-
-                            <button type="submit" class="btn-send">Enviar Mensagem</button>
-                        </form>
-
-                        <p class="form-note">
-                            Responderemos o mais rápido possível em horário comercial.
-                        </p>
-                    </div>
-                </div>
-
+    <section class="hero">
+        <div class="hero_container">
+            <div class="hero_logo">
+                <img src="img_padrao/logo completa branca.png" alt="Nome do site" class="hero_logo_img">
             </div>
         </div>
     </section>
@@ -138,56 +73,187 @@
 
 
 
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+        <div class="sobre_container">
+            <div class="sobre_topo">
+                <h2 class="sobre_titulo">Sobre a <b>Eletrônica Cobra</b></h2>
+                <p class="sobre_subtitulo">
+                    Há mais de 40 anos conectando pessoas à música em todo o Brasil, com paixão por instrumentos e
+                    compromisso em oferecer uma experiência de compra de verdade.
+                </p>
+            </div>
 
+            <div class="beneficios_container">
+                <div class="beneficio">
+                    <div class="beneficio_icone">
+                        <img src="icons/nota_musical.png" alt="Nota Musical" width="30" height="30">
+                    </div>
+                    <h3 class="beneficio_titulo">Variedade</h3>
+                    <p class="beneficio_texto">Milhares de produtos das<br>melhores marcas do mercado</p>
+                </div>
 
+                <div class="beneficio">
+                    <div class="beneficio_icone">
+                        <img src="icons/distintivo.png" alt="Ícone de Qualidade" width="30" height="30">
+                    </div>
+                    <h3 class="beneficio_titulo">Qualidade</h3>
+                    <p class="beneficio_texto">Instrumentos testados e<br>aprovados por profissionais</p>
+                </div>
 
+                <div class="beneficio">
+                    <div class="beneficio_icone">
+                        <img src="icons/relogio.png" alt="Ícone de Entrega Rápida" width="30" height="30">
+                    </div>
+                    <h3 class="beneficio_titulo">Entrega Rápida</h3>
+                    <p class="beneficio_texto">Receba seus produtos com<br>segurança e rapidez</p>
+                </div>
 
+                <div class="beneficio">
+                    <div class="beneficio_icone">
+                        <img src="icons/coracao.png" alt="Ícone de Coração" width="30" height="30">
+                    </div>
+                    <h3 class="beneficio_titulo">Paixão</h3>
+                    <p class="beneficio_texto">Atendimento feito por músicos<br>para músicos</p>
+                </div>
+            </div>
 
+            <div class="sobre_amp">
+                <div class="amp_grade">
+                    <div class="amp_item">
+                        <div class="amp_num"><span class="amp_red">40</span>+</div>
+                        <div class="amp_label">Anos de Experiência</div>
+                    </div>
+                    <div class="amp_item">
+                        <div class="amp_num"><span class="amp_red">5000</span>+</div>
+                        <div class="amp_label">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="amp_item">
+                        <div class="amp_num"><span class="amp_red">1000</span>+</div>
+                        <div class="amp_label">Produtos em Estoque</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-wrap">
-            <div class="footer-grid">
-
-                <!-- COL 1: Brand -->
-                <div class="footer-col">
-                    <a class="footer-brand" href="#">
-                        <span class="footer-brand__icon" aria-hidden="true">♪</span>
-                        <span class="footer-brand__name">ELETRÔNICA <b>COBRA</b></span>
-                    </a>
-
-                    <p class="footer-text">
-                        Sua loja de confiança para instrumentos musicais há mais de 40 anos.
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="contato_container">
+            <div class="contato_grid">
+                <!-- contato esquerda (mapa) -->
+                <div>
+                    <h2 class="contato_titulo">Entre em <b>Contato</b></h2>
+                    <p class="contato_subtitulo">
+                        Estamos prontos para ajudar você a encontrar o instrumento perfeito!
+                        Visite nossa loja ou envie uma mensagem.
                     </p>
 
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/cobrainstrumentosmusicais/" target="_blank" rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/instagram.png" alt="Ícone do Instagram" width="40" height="40">
-                        </a>
-                        <a href="#" target="_blank" rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/facebook.png" alt="Ícone do Facebook" width="40" height="40">
-                        </a>
-                        <a href="#" target="_blank" rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/tiktok.png" alt="Ícone do TikTok" width="40" height="40">
+                    <div class="mapa_container">
+                        <div class="mapa_container_topo">
+                            <div class="mapa_titulo">Nossa loja</div>
+                            <a class="mapa_link" href="https://maps.app.goo.gl/TSSWCdQ3NmGyscZQ6" target="_blank"
+                                rel="noopener">
+                                Abrir no Google Maps →
+                            </a>
+                        </div>
+
+                        <div class="mapa">
+                            <iframe title="Mapa da loja Eletrônica Cobra"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.65935585806!2d-52.2725839!3d-27.6350649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e3138a6bcd1dd9%3A0xf24c998ece4995bc!2sCobra%20Instrumentos%20Musicais%20e%20Eletr%C3%B4nica!5e0!3m2!1spt-BR!2sbr!4v1769733603501!5m2!1spt-BR!2sbr">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="contato_whatsapp">
+                        <a class="frase_whatsapp">Ficou alguma dúvida?</a>
+                        <a class="btn_whatsapp" id="btn_whatsapp" target="_blank" rel="noopener">
+                            <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="20" height="20">
+                            <span>Nos chame no WhatsApp</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- COL 2: Links rápidos + Legal -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Links Rápidos</h4>
-                    <ul class="footer-list">
+                <!-- contato direita (formulário) -->
+                <div>
+                    <div class="form">
+                        <h3>Envie a sua <b>mensagem</b></h3>
+
+                        <form method="post" class="form_contato">
+                            <label>
+                                Nome
+                                <input type="text" name="nome" placeholder="Seu nome" required>
+                            </label>
+                            <label>
+                                Email
+                                <input type="email" name="email" placeholder="exemplo@email.com" required>
+                            </label>
+                            <label>
+                                Telefone
+                                <input type="tel" name="telefone" placeholder="(54) 99999-9999">
+                            </label>
+                            <label>
+                                Mensagem
+                                <textarea name="mensagem" rows="5" maxlength="350" placeholder="Como podemos ajudar?"
+                                    required></textarea>
+                            </label>
+                            <button type="submit" class="btn_enviar_msg">Enviar Mensagem</button>
+                        </form>
+
+                        <p class="form_observacao">Responderemos o mais rápido possível em horário comercial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer_margens">
+            <div class="footer_grid">
+                <!-- COL 1: Logo -->
+                <div class="footer_col">
+                    <a class="footer_logo">
+                        <img src="img_padrao/mascote_cobra.png" alt="Logo Eletrônica Cobra" width="40" height="40">
+                        <span class="footer_nome">ELETRÔNICA <b>COBRA</b></span>
+                    </a>
+
+                    <p class="footer_texto">
+                        Sua loja de confiança para instrumentos musicais há mais de 40 anos.
+                    </p>
+
+                    <div class="footer_redes_sociais">
+                        <a href="https://www.instagram.com/cobrainstrumentosmusicais/" target="_blank" rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/instagram.png" alt="Ícone do Instagram" width="40"
+                                height="40">
+                        </a>
+                        <a href="https://www.facebook.com/cobrainstrumentosmusicais?locale=pt_BR" target="_blank"
+                            rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/facebook.png" alt="Ícone do Facebook" width="40"
+                                height="40">
+                        </a>
+                        <a href="https://www.tiktok.com/@eletronica.cobra" target="_blank" rel="noopener">
+                            <img class="btn_rede_sociais" src="icons/tiktok.png" alt="Ícone do TikTok" width="40"
+                                height="40">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COL 2: Links rápidos -->
+                <div class="footer_col">
+                    <h4 class="footer_titulo">Links Rápidos</h4>
+                    <ul class="footer_lista">
                         <li><a href="#">Início</a></li>
                         <li><a href="#">Produtos</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- COL 3: Categorias -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Categorias</h4>
-                    <ul class="footer-list">
+                <div class="footer_col">
+                    <h4 class="footer_titulo">Categorias</h4>
+                    <ul class="footer_lista">
                         <li><a href="#">Guitarras</a></li>
                         <li><a href="#">Baixos</a></li>
                         <li><a href="#">Baterias</a></li>
@@ -197,10 +263,10 @@
                     </ul>
                 </div>
 
-                <!-- COL 4: Funcionamento -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Horário de Funcionamento</h4>
-                    <ul class="footer-list footer-list--plain">
+                <!-- COL 4: Horarios -->
+                <div class="footer_col">
+                    <h4 class="footer_titulo">Horário de Funcionamento</h4>
+                    <ul class="footer_lista">
                         <li>Segunda a Sexta: 08:30h - 12h | 13:30h - 18h</li>
                         <li>Sábado: 8h - 12h</li>
                         <li>Domingo: Fechado</li>
@@ -208,21 +274,21 @@
                 </div>
 
                 <!-- COL 5: Contato + Pagamento -->
-                <div class="footer-col">
-                    <h4 class="footer-title footer-title--spaced">Contato</h4>
-                    <ul class="footer-list footer-list--plain">
+                <div class="footer_col">
+                    <h4 class="footer_titulo">Contato</h4>
+                    <ul class="footer_lista">
                         <li>Av. Comandante Kramer, 78 - Centro, Erechim - RS</li>
                         <li>(54) 3321-3833</li>
                         <li></li>
                     </ul>
 
-                    <h4 class="footer-title footer-title--spaced">Formas de Pagamento</h4>
-                    <div class="footer-payments" aria-label="Formas de pagamento">
-                        <span class="icon_pagamento_footer" title="PIX">PIX</span>
-                        <span class="icon_pagamento_footer" title="Boleto">Boleto</span>
-                        <span class="icon_pagamento_footer" title="Crédito">Crédito</span>
-                        <span class="icon_pagamento_footer" title="Débito">Débito</span>
-                        <span class="icon_pagamento_footer" title="Parcelamento">12x</span>
+                    <h4 class="footer_titulo footer_titulo_espacamento">Formas de Pagamento</h4>
+                    <div class="footer_pagamentos" aria-label="Formas de pagamento">
+                        <span class="icon_pagamento_footer">Dinheiro</span>
+                        <span class="icon_pagamento_footer">PIX</span>
+                        <span class="icon_pagamento_footer">Crédito</span>
+                        <span class="icon_pagamento_footer">Débito</span>
+                        <span class="icon_pagamento_footer">12x</span>
                     </div>
                 </div>
             </div>
@@ -234,9 +300,16 @@
             </div>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
+
+
+<script>
+
+    //envia msg no wpp ao clicar no btn
+    const telefone = "555491862723";
+    const mensagem = "Olá! Vim pelo site e gostaria de tirar uma dúvida.";
+    document.getElementById("btn_whatsapp").href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+</script>

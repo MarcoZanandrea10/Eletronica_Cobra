@@ -54,10 +54,6 @@
         </div>
     </header>
 
-
-
-
-
     <section class="hero">
         <div class="hero_container">
             <div class="hero_logo">
@@ -66,12 +62,97 @@
         </div>
     </section>
 
+    <!-- CATEGORIAS -->
+    <section class="categorias">
+        <div class="categorias_container">
+            <button class="categorias_seta categorias_seta_esq" type="button">‹</button>
 
+            <div class="familias_topo_container" id="categoriasScroll">
+                <a class="categorias_card" href="#audio">Áudio</a>
+                <a class="categorias_card" href="#caixa_som">Caixa de Som</a>
+                <a class="categorias_card" href="#cordas">Cordas</a>
+                <a class="categorias_card" href="#teclas">Teclas</a>
+                <a class="categorias_card" href="#percussao">Percussão</a>
+                <a class="categorias_card" href="#sopro">Sopro</a>
+                <a class="categorias_card" href="#infantil">Infantil</a>
+                <a class="categorias_card" href="#bags">Bags</a>
+                <a class="categorias_card" href="#caixa_ambiente">Som Ambiente</a>
+                <a class="categorias_card" href="#acessorios">Acessórios</a>
+            </div>
 
+            <button class="categorias_seta categorias_seta_dir" type="button">›</button>
+        </div>
+    </section>
 
+    <!-- MARCAS -->
+    <!-- (se quiser adicionar mais marcas) -->
+    <section class="marcas">
+        <p class="marcas_titulo">Compre por marca</p>
+        <div class="marcas_container">
+            <button class="marcas_seta marcas_seta_esq" type="button" aria-label="Ver marcas anteriores">‹</button>
 
+            <div class="marcas_lista" id="marcasScroll" aria-label="Marcas">
 
+                <a class="marca_item" href="#">
+                    <img src="marcas/jbl.png" height="80px" width="auto">
+                </a>
 
+                <a class="marca_item" href="#">
+                    <img src="marcas/casio.png" height="120px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/tagima.png" height="40px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/yamaha.png" height="40px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/akg.png" height="100px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/crafter.png" height="100px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/giannini.png" height="130px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/frahm.png" height="50px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/borne.png" height="50px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/takamine.png" height="60px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/behringer.png" height="60px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/shure.png" height="40px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/michael.png" height="100px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/kadosh.png" height="50px" width="auto">
+                </a>
+            </div>
+
+            <button class="marcas_seta marcas_seta_dir" type="button" aria-label="Ver próximas marcas">›</button>
+        </div>
+    </section>
 
     <!-- SOBRE -->
     <section class="sobre" id="sobre">
@@ -304,12 +385,48 @@
 
 </html>
 
-
 <script>
 
-    //envia msg no wpp ao clicar no btn
+    // envia msg no wpp ao clicar no btn
     const telefone = "555491862723";
     const mensagem = "Olá! Vim pelo site e gostaria de tirar uma dúvida.";
     document.getElementById("btn_whatsapp").href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+    //REVER O PQ ESTA BUGADO, SO DA PRA USAR AS SETAS DAS MARCAS QUANDO RECARREGAR A PAGINA !!!
+    //SETAS DAS CATEGORIAS ESTAO CORRETAS.
+    // barra de rolagem categorias e marcas
+    function iniciarSetas(scrollId, setaEsqClass, setaDirClass) {
+        const scroller = document.getElementById(scrollId);
+        const btnEsq = document.querySelector(setaEsqClass);
+        const btnDir = document.querySelector(setaDirClass);
+
+        if (!scroller || !btnEsq || !btnDir) return;
+
+        function atualizarSetas() {
+            const max = scroller.scrollWidth - scroller.clientWidth;
+            btnEsq.classList.toggle("is_disabled", scroller.scrollLeft <= 2);
+            btnDir.classList.toggle("is_disabled", scroller.scrollLeft >= max - 2);
+        }
+
+        function passoScroll() {
+            return Math.max(240, Math.floor(scroller.clientWidth * 0.65));
+        }
+
+        btnEsq.addEventListener("click", () => {
+            scroller.scrollBy({ left: -passoScroll(), behavior: "smooth" });
+        });
+
+        btnDir.addEventListener("click", () => {
+            scroller.scrollBy({ left: passoScroll(), behavior: "smooth" });
+        });
+
+        scroller.addEventListener("scroll", atualizarSetas);
+        window.addEventListener("resize", atualizarSetas);
+
+        atualizarSetas();
+    }
+
+    iniciarSetas("categoriasScroll", ".categorias_seta_esq", ".categorias_seta_dir");
+    iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
 
 </script>

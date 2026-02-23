@@ -163,15 +163,15 @@ body {
 }
 
 .familias_topo_container {
-  max-width: 1500px;
-  gap: 28px;
-  margin: 0 auto;
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  max-width: 80%;
+  gap: 28px;
 }
 
 .categorias_card {
@@ -222,13 +222,14 @@ body {
   border: none;
   cursor: pointer;
   position: absolute;
-  margin: 0 100px;
+  margin: 0 50px;
   top: 50%;
   width: 52px;
   height: 52px;
   font-size: 34px;
   font-weight: 600;
   border-radius: 16px;
+  z-index: 4;
   transform: translateY(-50%);
   transition: transform .18s ease, filter .18s ease, opacity .18s ease;
 }
@@ -277,8 +278,9 @@ body {
   scrollbar-width: none;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  max-width: 50%;
   gap: 50px;
-  margin: 0 400px;
 }
 
 .marca_item {
@@ -330,7 +332,7 @@ body {
 
 .sobre {
   background: white;
-  padding: 140px 0 80px;
+  padding: 50px 0 80px;
 }
 
 .sobre_container {

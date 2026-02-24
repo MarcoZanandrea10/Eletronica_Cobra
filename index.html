@@ -36,7 +36,7 @@
             <div class="menu">
                 <nav class="nav"> <!-- depois linkar com as classes respectivas-->
                     <a href="#">Início</a>
-                    <a href="#">Produtos</a>
+                    <a href="#produtos">Produtos</a>
                     <a href="#sobre">Sobre</a>
                     <a href="#contato">Contato</a>
                 </nav>
@@ -54,10 +54,11 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero_container">
-            <div class="hero_logo">
-                <img src="img_padrao/logo completa branca.png" alt="Nome do site" class="hero_logo_img">
+    <!-- IMAGEM FUNDO DA LOGO -->
+    <section class="banner">
+        <div class="banner_container">
+            <div class="logo">
+                <img src="img_padrao/logo completa branca.png" alt="Nome do site" class="logo_img">
             </div>
         </div>
     </section>
@@ -84,8 +85,165 @@
         </div>
     </section>
 
+
+
+
+    <!-- PRODUTOS -->
+    <!-- depois adicionar um for com php para criar automatico os cards e puxar do bd os produtos -->
+    <section class="produtos" id="produtos">
+
+        <!-- MAIS VENDIDOS -->
+        <div class="produtos_container">
+            <div class="produtos_container_topo">
+                <div class="home_bloco_titulo_wrap">
+                    <h2 class="produtos_titulo">Mais Vendidos</h2>
+                    <a class="produtos_ver_mais" href="#">Ver mais</a>
+                </div>
+
+                <div class="home_bloco_controles">
+                    <button class="produtos_seta maisvendidos_seta_esq" type="button">‹</button>
+                    <button class="produtos_seta maisvendidos_seta_dir" type="button">›</button>
+                </div>
+            </div>
+
+            <div class="produtos_carrossel" id="maisVendidosScroll">
+                <a class="produto_card" href="#">
+                    <div class="produto_img">
+                        <img src="img_produtos/produto1.png" alt="Produto">
+                    </div>
+                    <div class="produto_info">
+                        <span class="produto_nome">Guitarra Strat Vintage</span>
+                        <span class="produto_preco">R$ 1.799,00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- PROMOÇÕES -->
+        <div class="produtos_container">
+            <div class="produtos_container_topo">
+                <div class="home_bloco_titulo_wrap">
+                    <h2 class="produtos_titulo">Promoções</h2>
+                    <a class="produtos_ver_mais" href="#">Ver mais</a>
+                </div>
+
+                <div class="home_bloco_controles">
+                    <button class="produtos_seta promocoes_seta_esq" type="button">‹</button>
+                    <button class="produtos_seta promocoes_seta_dir" type="button">›</button>
+                </div>
+            </div>
+
+            <div class="produtos_carrossel" id="promocoesScroll">
+                <a class="produto_card" href="#">
+                    <div class="produto_badge produto_badge_promo">-20%</div>
+                    <div class="produto_img">
+                        <img src="img_produtos/produto3.png" alt="Produto">
+                    </div>
+                    <div class="produto_info">
+                        <span class="produto_nome">Pedal Overdrive</span>
+                        <span class="produto_preco">
+                            <span class="produto_preco_antigo">R$ 399,00</span>
+                            <span class="produto_preco_novo">R$ 319,00</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- NOVIDADES -->
+        <div class="produtos_container">
+            <div class="produtos_container_topo">
+                <div class="home_bloco_titulo_wrap">
+                    <h2 class="produtos_titulo">Novidades</h2>
+                    <a class="produtos_ver_mais" href="#">Ver mais</a>
+                </div>
+
+                <div class="home_bloco_controles">
+                    <button class="produtos_seta novidades_seta_esq" type="button">‹</button>
+                    <button class="produtos_seta novidades_seta_dir" type="button">›</button>
+                </div>
+            </div>
+
+            <div class="produtos_carrossel" id="novidadesScroll">
+                <a class="produto_card" href="#">
+                    <div class="produto_badge produto_badge_novo">NOVO</div>
+                    <div class="produto_img">
+                        <img src="img_produtos/produto4.png" alt="Produto">
+                    </div>
+                    <div class="produto_info">
+                        <span class="produto_nome">Microfone Condensador</span>
+                        <span class="produto_preco">R$ 489,00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- POR CATEGORIA: VIOLÕES -->
+        <div class="produtos_container">
+            <div class="produtos_container_topo">
+                <div class="home_bloco_titulo_wrap">
+                    <h2 class="produtos_titulo">Violões</h2>
+                    <a class="produtos_ver_mais" href="#">Ver mais</a>
+                </div>
+
+                <div class="home_bloco_controles">
+                    <button class="produtos_seta produtos1_seta_esq" type="button">‹</button>
+                    <button class="produtos_seta produtos1_seta_dir" type="button">›</button>
+                </div>
+            </div>
+
+            <div class="produtos_carrossel" id="violoesScroll">
+                <a class="produto_card" href="#">
+                    <div class="produto_img">
+                        <img src="img_produtos/violao1.png" alt="Violão">
+                    </div>
+                    <div class="produto_info">
+                        <span class="produto_nome">Violão Clássico Nylon</span>
+                        <span class="produto_preco">R$ 699,00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- POR CATEGORIA: CAIXAS DE SOM -->
+        <div class="produtos_container">
+            <div class="produtos_container_topo">
+                <div class="home_bloco_titulo_wrap">
+                    <h2 class="produtos_titulo">Caixas de Som</h2>
+                    <a class="produtos_ver_mais" href="#">Ver mais</a>
+                </div>
+
+                <div class="home_bloco_controles">
+                    <button class="produtos_seta produtos2_seta_esq" type="button">‹</button>
+                    <button class="produtos_seta produtos2_seta_dir" type="button">›</button>
+                </div>
+            </div>
+
+            <div class="produtos_carrossel" id="caixasScroll">
+                <a class="produto_card" href="#">
+                    <div class="produto_img">
+                        <img src="img_produtos/caixa1.png" alt="Caixa de Som">
+                    </div>
+                    <div class="produto_info">
+                        <span class="produto_nome">Caixa Ativa 12” 500W</span>
+                        <span class="produto_preco">R$ 1.299,00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
     <!-- MARCAS -->
-    <!-- (se quiser adicionar mais marcas) -->
     <section class="marcas">
         <p class="marcas_titulo">Compre por marca</p>
         <div class="marcas_container">
@@ -325,13 +483,14 @@
                     <h4 class="footer_titulo">Links Rápidos</h4>
                     <ul class="footer_lista">
                         <li><a href="#">Início</a></li>
-                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- COL 3: Categorias -->
+                <!-- ajeitar isso depois -->
                 <div class="footer_col">
                     <h4 class="footer_titulo">Categorias</h4>
                     <ul class="footer_lista">
@@ -428,5 +587,12 @@
 
     iniciarSetas("categoriasScroll", ".categorias_seta_esq", ".categorias_seta_dir");
     iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
+
+    //novos
+    iniciarCarrossel("maisVendidosScroll", ".maisvendidos_seta_esq", ".maisvendidos_seta_dir");
+    iniciarCarrossel("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
+    iniciarCarrossel("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
+    iniciarCarrossel("violoesScroll", ".produtos1_seta_esq", ".produtos1_seta_dir");
+    iniciarCarrossel("caixasScroll", ".produtos2_seta_esq", ".produtos2_seta_dir");
 
 </script>

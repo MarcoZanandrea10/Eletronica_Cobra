@@ -124,7 +124,7 @@ body {
 }
 
 /* FUNDO PRINCIPAL (DECIDIR AINDA) */
-.hero {
+.banner {
   /* decidir entre 1 dos 4 fundos */
   background-image: url("../img_padrao/fundo3.png");
   background-repeat: no-repeat;
@@ -132,13 +132,13 @@ body {
   background-position: center;
 }
 
-.hero_container {
+.banner_container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 28px 18px 48px;
 }
 
-.hero_logo {
+.logo {
   justify-content: center;
   align-items: center;
   position: relative;
@@ -146,7 +146,7 @@ body {
   z-index: 1;
 }
 
-.hero_logo_img {
+.logo_img {
   width: min(860px, 92%);
 }
 /* ATE AQUI */
@@ -322,6 +322,234 @@ body {
 .marcas_seta:active {
   transform: translateY(-50%) scale(.8);
 }
+
+
+
+
+
+
+
+
+
+.produtos {
+  background: #f7f7f7;
+  padding: 44px 0 60px;
+}
+
+.produtos_container {
+  max-width: 1200px;
+  margin: 0 auto 44px;
+  padding: 0 50px;
+  position: relative; 
+}
+
+.produtos_container_topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.home_bloco_titulo_wrap {
+  display: flex;
+  text-decoration: none;
+  /* align-items: baseline; */
+  gap: 14px;
+}
+
+.produtos_titulo {
+  font-family: "Orbitron", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+  color: #111;
+  letter-spacing: .3px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* linha degradê elegante */
+.produtos_titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 120px;
+  background: linear-gradient(90deg, var(--vermelho) 0%, rgba(225, 6, 0, .5) 60%, transparent 100%);
+  border-radius: 999px;
+}
+
+.produtos_ver_mais {
+  color: var(--vermelho);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.produtos_ver_mais:hover {
+  text-decoration: underline;
+  color: var(--vermelho-escuro);
+}
+
+.produtos_carrossel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 10px 60px; /* espaço interno pras setas */
+  scrollbar-width: none;
+}
+
+.produtos_carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.home_bloco_controles {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* permite clicar nos cards */
+}
+
+.produtos_seta {
+  pointer-events: all;
+  width: 50px;
+  height: 50px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 16px 34px rgba(15,23,42,.15);
+
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.produtos_seta:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.produtos_seta:active {
+  transform: scale(.96);
+}
+
+.produtos_seta.is_disabled {
+  opacity: .35;
+  pointer-events: none;
+}
+
+/* card de produto (clean) */
+.produto_card {
+  flex: 0 0 220px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, .06);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .05);
+  text-decoration: none;
+  color: #111;
+  overflow: hidden;
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.produto_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, .12);
+}
+
+.produto_img {
+  height: 160px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto_img img {
+  max-width: 88%;
+  max-height: 88%;
+  object-fit: contain;
+}
+
+.produto_info {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.produto_nome {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.produto_preco {
+  font-weight: 900;
+  color: #111;
+}
+
+.produto_preco_antigo {
+  color: #64748b;
+  text-decoration: line-through;
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+.produto_preco_novo {
+  color: var(--vermelho);
+  font-weight: 900;
+}
+
+/* badges */
+.produto_badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .3px;
+  color: #fff;
+}
+
+.produto_badge_promo {
+  background: var(--vermelho);
+}
+
+.produto_badge_novo {
+  background: #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sobre_titulo b,
 .contato_titulo b,

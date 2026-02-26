@@ -68,7 +68,7 @@
         <div class="categorias_container">
             <button class="categorias_seta categorias_seta_esq" type="button">‹</button>
 
-            <div class="familias_topo_container" id="categoriasScroll">
+            <div class="categorias_lista" id="categoriasScroll">
                 <a class="categorias_card" href="#audio">Áudio</a>
                 <a class="categorias_card" href="#caixa_som">Caixa de Som</a>
                 <a class="categorias_card" href="#cordas">Cordas</a>
@@ -86,27 +86,22 @@
     </section>
 
 
-
-
     <!-- PRODUTOS -->
     <!-- depois adicionar um for com php para criar automatico os cards e puxar do bd os produtos -->
     <section class="produtos" id="produtos">
 
         <!-- MAIS VENDIDOS -->
         <div class="produtos_container">
+            <button class="produtos_seta maisvendidos_seta_esq" type="button">‹</button>
+
             <div class="produtos_container_topo">
-                <div class="home_bloco_titulo_wrap">
+                <div class="produtos_container_titulo">
                     <h2 class="produtos_titulo">Mais Vendidos</h2>
                     <a class="produtos_ver_mais" href="#">Ver mais</a>
                 </div>
-
-                <div class="home_bloco_controles">
-                    <button class="produtos_seta maisvendidos_seta_esq" type="button">‹</button>
-                    <button class="produtos_seta maisvendidos_seta_dir" type="button">›</button>
-                </div>
             </div>
 
-            <div class="produtos_carrossel" id="maisVendidosScroll">
+            <div class="produtos_container_itens" id="maisVendidosScroll">
                 <a class="produto_card" href="#">
                     <div class="produto_img">
                         <img src="img_produtos/produto1.png" alt="Produto">
@@ -114,128 +109,192 @@
                     <div class="produto_info">
                         <span class="produto_nome">Guitarra Strat Vintage</span>
                         <span class="produto_preco">R$ 1.799,00</span>
+
+                        <div class="produto_pagamento">
+                            <span class="produto_parcelado">
+                                EM ATÉ 10X SEM JUROS
+                            </span>
+                            <span class="produto_pix">
+                                R$ 1.181,50 À VISTA NO PIX
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="produto_acoes">
+                        <button class="produto_btn">Comprar</button>
                     </div>
                 </a>
             </div>
-        </div>
 
+            <button class="produtos_seta maisvendidos_seta_dir" type="button">›</button>
+        </div>
 
         <!-- PROMOÇÕES -->
         <div class="produtos_container">
+            <button class="produtos_seta promocoes_seta_esq" type="button">‹</button>
+
             <div class="produtos_container_topo">
-                <div class="home_bloco_titulo_wrap">
+                <div class="produtos_container_titulo">
                     <h2 class="produtos_titulo">Promoções</h2>
                     <a class="produtos_ver_mais" href="#">Ver mais</a>
                 </div>
-
-                <div class="home_bloco_controles">
-                    <button class="produtos_seta promocoes_seta_esq" type="button">‹</button>
-                    <button class="produtos_seta promocoes_seta_dir" type="button">›</button>
-                </div>
             </div>
 
-            <div class="produtos_carrossel" id="promocoesScroll">
+            <div class="produtos_container_itens" id="promocoesScroll">
                 <a class="produto_card" href="#">
-                    <div class="produto_badge produto_badge_promo">-20%</div>
+                    <div class="produto_badge produto_badge_promo">-10%</div>
+
                     <div class="produto_img">
                         <img src="img_produtos/produto3.png" alt="Produto">
                     </div>
+
                     <div class="produto_info">
                         <span class="produto_nome">Pedal Overdrive</span>
                         <span class="produto_preco">
                             <span class="produto_preco_antigo">R$ 399,00</span>
                             <span class="produto_preco_novo">R$ 319,00</span>
                         </span>
+
+                        <div class="produto_pagamento">
+                            <span class="produto_parcelado">
+                                EM ATÉ 10X SEM JUROS
+                            </span>
+                            <span class="produto_pix">
+                                R$ 1.181,50 À VISTA NO PIX
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="produto_acoes">
+                        <button class="produto_btn">Comprar</button>
                     </div>
                 </a>
             </div>
-        </div>
 
+            <button class="produtos_seta promocoes_seta_dir" type="button">›</button>
+        </div>
 
         <!-- NOVIDADES -->
         <div class="produtos_container">
+            <button class="produtos_seta novidades_seta_esq" type="button">‹</button>
+
             <div class="produtos_container_topo">
-                <div class="home_bloco_titulo_wrap">
+                <div class="produtos_container_titulo">
                     <h2 class="produtos_titulo">Novidades</h2>
                     <a class="produtos_ver_mais" href="#">Ver mais</a>
                 </div>
-
-                <div class="home_bloco_controles">
-                    <button class="produtos_seta novidades_seta_esq" type="button">‹</button>
-                    <button class="produtos_seta novidades_seta_dir" type="button">›</button>
-                </div>
             </div>
 
-            <div class="produtos_carrossel" id="novidadesScroll">
+            <div class="produtos_container_itens" id="novidadesScroll">
                 <a class="produto_card" href="#">
                     <div class="produto_badge produto_badge_novo">NOVO</div>
+
                     <div class="produto_img">
                         <img src="img_produtos/produto4.png" alt="Produto">
                     </div>
+
                     <div class="produto_info">
                         <span class="produto_nome">Microfone Condensador</span>
                         <span class="produto_preco">R$ 489,00</span>
+
+                        <div class="produto_pagamento">
+                            <span class="produto_parcelado">
+                                EM ATÉ 10X SEM JUROS
+                            </span>
+                            <span class="produto_pix">
+                                R$ 1.181,50 À VISTA NO PIX
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="produto_acoes">
+                        <button class="produto_btn">Comprar</button>
                     </div>
                 </a>
             </div>
-        </div>
 
+            <button class="produtos_seta novidades_seta_dir" type="button">›</button>
+        </div>
 
         <!-- POR CATEGORIA: VIOLÕES -->
         <div class="produtos_container">
+            <button class="produtos_seta produtos1_seta_esq" type="button">‹</button>
+
             <div class="produtos_container_topo">
-                <div class="home_bloco_titulo_wrap">
+                <div class="produtos_container_titulo">
                     <h2 class="produtos_titulo">Violões</h2>
                     <a class="produtos_ver_mais" href="#">Ver mais</a>
                 </div>
-
-                <div class="home_bloco_controles">
-                    <button class="produtos_seta produtos1_seta_esq" type="button">‹</button>
-                    <button class="produtos_seta produtos1_seta_dir" type="button">›</button>
-                </div>
             </div>
 
-            <div class="produtos_carrossel" id="violoesScroll">
+            <div class="produtos_container_itens" id="violoesScroll">
                 <a class="produto_card" href="#">
                     <div class="produto_img">
                         <img src="img_produtos/violao1.png" alt="Violão">
                     </div>
+
                     <div class="produto_info">
                         <span class="produto_nome">Violão Clássico Nylon</span>
                         <span class="produto_preco">R$ 699,00</span>
+
+                        <div class="produto_pagamento">
+                            <span class="produto_parcelado">
+                                EM ATÉ 10X SEM JUROS
+                            </span>
+                            <span class="produto_pix">
+                                R$ 1.181,50 À VISTA NO PIX
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="produto_acoes">
+                        <button class="produto_btn">Comprar</button>
                     </div>
                 </a>
             </div>
-        </div>
 
+            <button class="produtos_seta produtos1_seta_dir" type="button">›</button>
+        </div>
 
         <!-- POR CATEGORIA: CAIXAS DE SOM -->
         <div class="produtos_container">
+            <button class="produtos_seta produtos2_seta_esq" type="button">‹</button>
+
             <div class="produtos_container_topo">
-                <div class="home_bloco_titulo_wrap">
+                <div class="produtos_container_titulo">
                     <h2 class="produtos_titulo">Caixas de Som</h2>
                     <a class="produtos_ver_mais" href="#">Ver mais</a>
                 </div>
-
-                <div class="home_bloco_controles">
-                    <button class="produtos_seta produtos2_seta_esq" type="button">‹</button>
-                    <button class="produtos_seta produtos2_seta_dir" type="button">›</button>
-                </div>
             </div>
 
-            <div class="produtos_carrossel" id="caixasScroll">
+            <div class="produtos_container_itens" id="caixasScroll">
                 <a class="produto_card" href="#">
                     <div class="produto_img">
                         <img src="img_produtos/caixa1.png" alt="Caixa de Som">
                     </div>
+                    
                     <div class="produto_info">
                         <span class="produto_nome">Caixa Ativa 12” 500W</span>
                         <span class="produto_preco">R$ 1.299,00</span>
+
+                        <div class="produto_pagamento">
+                            <span class="produto_parcelado">
+                                EM ATÉ 10X SEM JUROS
+                            </span>
+                            <span class="produto_pix">
+                                R$ 1.181,50 À VISTA NO PIX
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="produto_acoes">
+                        <button class="produto_btn">Comprar</button>
                     </div>
                 </a>
             </div>
-        </div>
 
+            <button class="produtos_seta produtos2_seta_dir" type="button">›</button>
+        </div>
     </section>
 
 
@@ -491,14 +550,14 @@
 
                 <!-- COL 3: Categorias -->
                 <!-- ajeitar isso depois -->
-                <div class="footer_col">
+                <div class="footer_col footer_col_categorias">
                     <h4 class="footer_titulo">Categorias</h4>
                     <ul class="footer_lista">
-                        <li><a href="#">Guitarras</a></li>
-                        <li><a href="#">Baixos</a></li>
-                        <li><a href="#">Baterias</a></li>
-                        <li><a href="#">Teclados</a></li>
                         <li><a href="#">Áudio</a></li>
+                        <li><a href="#">Caixa de Som</a></li>
+                        <li><a href="#">Cordas</a></li>
+                        <li><a href="#">Teclas</a></li>
+                        <li><a href="#">Percussão</a></li>
                         <li><a href="#">Acessórios</a></li>
                     </ul>
                 </div>

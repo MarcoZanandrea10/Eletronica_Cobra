@@ -178,8 +178,6 @@
         </div>
     </section>
 
-
-
     <!-- MARCAS -->
     <section class="marcas">
         <p class="marcas_titulo">Compre por marca</p>
@@ -343,7 +341,7 @@
 
                     <div class="contato_whatsapp">
                         <a class="frase_whatsapp">Ficou alguma dúvida?</a>
-                        <a class="btn_whatsapp" id="btn_whatsapp" target="_blank" rel="noopener">
+                        <a class="btn_whatsapp whatsapp_link" target="_blank" rel="noopener">
                             <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="20" height="20">
                             <span>Nos chame no WhatsApp</span>
                         </a>
@@ -382,6 +380,11 @@
             </div>
         </div>
     </section>
+
+    <!-- BTN WPP FIXO NA PÁGINA -->
+    <a class="btn_whatsapp_fixo whatsapp_link" target="_blank">
+        <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="30" height="30">
+    </a>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -486,7 +489,9 @@
     // envia msg no wpp ao clicar no btn
     const telefone = "555491862723";
     const mensagem = "Olá! Vim pelo site e gostaria de tirar uma dúvida.";
-    document.getElementById("btn_whatsapp").href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    document.querySelectorAll(".whatsapp_link").forEach(btn => {
+        btn.href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    });
 
     //REVER O PQ ESTA BUGADO, SO DA PRA USAR AS SETAS DAS MARCAS QUANDO RECARREGAR A PAGINA !!!
     //SETAS DAS CATEGORIAS ESTAO CORRETAS.
@@ -526,10 +531,7 @@
     iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
 
     //novos
-    iniciarCarrossel("maisVendidosScroll", ".maisvendidos_seta_esq", ".maisvendidos_seta_dir");
     iniciarCarrossel("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
     iniciarCarrossel("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
-    iniciarCarrossel("violoesScroll", ".produtos1_seta_esq", ".produtos1_seta_dir");
-    iniciarCarrossel("caixasScroll", ".produtos2_seta_esq", ".produtos2_seta_dir");
 
 </script>

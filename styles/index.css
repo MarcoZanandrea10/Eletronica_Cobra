@@ -149,7 +149,6 @@ body {
 .logo_img {
   width: min(860px, 92%);
 }
-
 /* ATE AQUI */
 
 .categorias_container,
@@ -264,13 +263,6 @@ body {
   transform: translateY(-1px);
 }
 
-
-
-
-
-
-
-
 .produtos {
   background: #f7f7f7;
   padding: 44px 0 60px;
@@ -305,7 +297,7 @@ body {
   position: relative;
   padding-bottom: 8px;
   letter-spacing: .3px;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 22px;
 }
 
@@ -351,27 +343,25 @@ body {
 }
 
 .produto_card {
-  flex: 0 0 300px;
-  background: #fff;
-  border-radius: 20px;
-  border: 2px solid transparent;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, .06);
-  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
   color: black;
+  display: flex;
   overflow: hidden;
   position: relative;
-  transition: all .25s ease;
-  display: flex;
+  text-decoration: none;
   flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  flex: 0 0 350px;
 }
 
 .produto_card:hover {
   border: 1px solid var(--vermelho);
 }
 
-/* imagem maior */
 .produto_img {
-  height: 300px;
+  height: 350px;
   background: #fafafa;
   display: flex;
   align-items: center;
@@ -379,19 +369,14 @@ body {
 }
 
 .produto_img img {
+  object-fit: contain;
   max-width: 90%;
   max-height: 90%;
-  object-fit: contain;
-  transition: transform .3s ease;
-}
-
-.produto_card:hover .produto_img img {
-  transform: scale(1.05);
 }
 
 .produto_info {
-  padding: 16px;
   display: grid;
+  padding: 16px;
   gap: 8px;
 }
 
@@ -402,28 +387,27 @@ body {
 }
 
 .produto_preco {
+  color: var(--vermelho);
   font-weight: 900;
   font-size: 18px;
-  color: var(--vermelho);
 }
 
-/* botão */
 .produto_acoes {
-  padding: 0 16px 16px 16px;
   margin-top: auto;
+  padding: 0 16px 16px 16px;
 }
 
 .produto_btn {
-  width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
   background: var(--vermelho);
   color: white;
-  font-weight: 800;
-  font-size: 14px;
+  border: none;
   cursor: pointer;
   transition: all .2s ease;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
 }
 
 .produto_btn:hover {
@@ -455,37 +439,34 @@ body {
 }
 
 .produto_pagamento {
-  margin-top: 6px;
   display: flex;
   flex-direction: column;
+  margin-top: 6px;
   gap: 4px;
 }
 
 .produto_parcelado {
+  color: #555;
   font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
-  color: #555;
   letter-spacing: .3px;
 }
 
 .produto_pix {
+  color: #555;
   font-size: 13px;
   font-weight: 900;
-  color: #555;
 }
 
-
-
-
-
-
-
-
-
+.produto_preco_antigo {
+  color: #8a8a8ad9;
+  text-decoration: line-through;
+  margin-right: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
 
 /* SETAS */
-
 .categorias_seta {
   background: white;
   box-shadow: 0 14px 30px rgba(15, 23, 42, .12);
@@ -535,19 +516,13 @@ body {
   color: var(--vermelho-escuro);
 }
 
-.produtos_seta.maisvendidos_seta_esq,
 .produtos_seta.promocoes_seta_esq,
-.produtos_seta.novidades_seta_esq,
-.produtos_seta.produtos1_seta_esq,
-.produtos_seta.produtos2_seta_esq {
+.produtos_seta.novidades_seta_esq {
   left: -70px;
 }
 
-.produtos_seta.maisvendidos_seta_dir,
 .produtos_seta.promocoes_seta_dir,
-.produtos_seta.novidades_seta_dir,
-.produtos_seta.produtos1_seta_dir,
-.produtos_seta.produtos2_seta_dir {
+.produtos_seta.novidades_seta_dir {
   right: -70px;
 }
 
@@ -577,14 +552,6 @@ body {
   opacity: .35;
   pointer-events: none;
 }
-
-
-
-
-
-
-
-
 
 .sobre_titulo b,
 .contato_titulo b,
@@ -909,6 +876,36 @@ body {
   box-shadow: 0 5px 8px rgba(225, 6, 0, 0.35);
   background-color: var(--vermelho-escuro);
   transform: translateY(-1px);
+}
+
+.btn_whatsapp_fixo {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  background: #25D366;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  right: 25px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  z-index: 9999;
+  border-radius: 50%;
+  animation: whatsappPulse 1.8s infinite;
+}
+
+.btn_whatsapp_fixo:hover {
+  transform: scale(1.1  );
+}
+
+/* animacao btn wpp */
+@keyframes whatsappPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .6); }
+
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 .footer {

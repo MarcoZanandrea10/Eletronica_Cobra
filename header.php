@@ -28,7 +28,7 @@
             </div>
 
             <div class="menu">
-                <nav class="nav"> <!-- depois linkar com as classes respectivas-->
+                <nav class="nav">
                     <a href="#">Início</a>
                     <a href="#produtos">Produtos</a>
                     <a href="#sobre">Sobre</a>

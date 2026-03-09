@@ -7,12 +7,13 @@
     <title>Eletronica Cobra</title>
     <link rel="stylesheet" href="styles/index.css">
     <!-- criar script para style responsivo -->
-    <link rel="icon" type="image/png" href="img_padrao/mascote_cobra.png">
+    <link rel="icon" href="img_padrao/mascote_cobra.png">
 </head>
 
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php require 'header.php'; ?>
+
 
     <!-- IMAGEM FUNDO DA LOGO -->
     <section class="banner">
@@ -65,7 +66,7 @@
                     <div class="produto_badge produto_badge_promo">-10%</div>
 
                     <div class="produto_img">
-                        <img src="img_produtos/produto3.png" alt="Produto">
+                        <img src="" alt="Produto">
                     </div>
 
                     <div class="produto_info">
@@ -110,7 +111,7 @@
                     <div class="produto_badge produto_badge_novo">NOVO</div>
 
                     <div class="produto_img">
-                        <img src="img_produtos/produto4.png" alt="Produto">
+                        <img src="" alt="Produto">
                     </div>
 
                     <div class="produto_info">
@@ -439,58 +440,62 @@
             </div>
         </div>
     </footer>
+
+    <script src="styles/animacoes.js"></script>
+
+
+    <script>
+        // envia msg no wpp ao clicar no btn
+        const telefone = "555491862723";
+        const mensagem = "Olá! Vim pelo site e gostaria de tirar uma dúvida.";
+        document.querySelectorAll(".whatsapp_link").forEach(btn => {
+            btn.href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+        });
+
+        // setas para barra de rolagem 
+        function iniciarSetas(scrollId, setaEsqClass, setaDirClass) {
+            const scroller = document.getElementById(scrollId);
+            const btnEsq = document.querySelector(setaEsqClass);
+            const btnDir = document.querySelector(setaDirClass);
+
+            if (!scroller || !btnEsq || !btnDir) return;
+
+            function atualizarSetas() {
+                const max = scroller.scrollWidth - scroller.clientWidth;
+                btnEsq.classList.toggle("is_disabled", scroller.scrollLeft <= 2);
+                btnDir.classList.toggle("is_disabled", scroller.scrollLeft >= max - 2);
+            }
+
+            function passoScroll() {
+                return Math.max(240, Math.floor(scroller.clientWidth * 0.65));
+            }
+
+            btnEsq.addEventListener("click", () => {
+                scroller.scrollBy({
+                    left: -passoScroll(),
+                    behavior: "smooth"
+                });
+            });
+
+            btnDir.addEventListener("click", () => {
+                scroller.scrollBy({
+                    left: passoScroll(),
+                    behavior: "smooth"
+                });
+            });
+
+            scroller.addEventListener("scroll", atualizarSetas);
+            window.addEventListener("resize", atualizarSetas);
+
+            atualizarSetas();
+        }
+
+        iniciarSetas("categoriasScroll", ".categorias_seta_esq", ".categorias_seta_dir");
+        iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
+        iniciarSetas("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
+        iniciarSetas("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
+    </scriptsrc=>
+
 </body>
 
 </html>
-
-<script>
-
-    // envia msg no wpp ao clicar no btn
-    const telefone = "555491862723";
-    const mensagem = "Olá! Vim pelo site e gostaria de tirar uma dúvida.";
-    document.querySelectorAll(".whatsapp_link").forEach(btn => {
-        btn.href = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-    });
-
-    //REVER O PQ ESTA BUGADO, SO DA PRA USAR AS SETAS DAS MARCAS QUANDO RECARREGAR A PAGINA !!!
-    //SETAS DAS CATEGORIAS ESTAO CORRETAS.
-    // barra de rolagem categorias e marcas
-    function iniciarSetas(scrollId, setaEsqClass, setaDirClass) {
-        const scroller = document.getElementById(scrollId);
-        const btnEsq = document.querySelector(setaEsqClass);
-        const btnDir = document.querySelector(setaDirClass);
-
-        if (!scroller || !btnEsq || !btnDir) return;
-
-        function atualizarSetas() {
-            const max = scroller.scrollWidth - scroller.clientWidth;
-            btnEsq.classList.toggle("is_disabled", scroller.scrollLeft <= 2);
-            btnDir.classList.toggle("is_disabled", scroller.scrollLeft >= max - 2);
-        }
-
-        function passoScroll() {
-            return Math.max(240, Math.floor(scroller.clientWidth * 0.65));
-        }
-
-        btnEsq.addEventListener("click", () => {
-            scroller.scrollBy({ left: -passoScroll(), behavior: "smooth" });
-        });
-
-        btnDir.addEventListener("click", () => {
-            scroller.scrollBy({ left: passoScroll(), behavior: "smooth" });
-        });
-
-        scroller.addEventListener("scroll", atualizarSetas);
-        window.addEventListener("resize", atualizarSetas);
-
-        atualizarSetas();
-    }
-
-    iniciarSetas("categoriasScroll", ".categorias_seta_esq", ".categorias_seta_dir");
-    iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
-
-    //novos
-    iniciarCarrossel("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
-    iniciarCarrossel("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
-
-</script>

@@ -1,0 +1,98 @@
+.animar {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+/* começa a animação do 0 e termina no 1 */
+.animar.animar_preparado {
+  opacity: 0;
+}
+
+.animar.animar_preparado.animar_cima {
+  transform: translateY(40px);
+}
+
+.animar.animar_preparado.animar_baixo {
+  transform: translateY(-40px);
+}
+
+.animar.animar_preparado.animar_esquerda {
+  transform: translateX(-50px);
+}
+
+.animar.animar_preparado.animar_direita {
+  transform: translateX(50px);
+}
+
+.animar.animar_preparado.animar-zoom {
+  transform: scale(0.92);
+}
+
+.animar.ativo {
+  opacity: 1;
+}
+
+/* quando a classe "ativo" for adicionada, a animação começa e o elemento volta para a posição original */
+.animar.animar_preparado.animar_cima.ativo,
+.animar.animar_preparado.animar_baixo.ativo,
+.animar.animar_preparado.animar_esquerda.ativo,
+.animar.animar_preparado.animar_direita.ativo {
+  transform: translateX(0) translateY(0);
+}
+
+.animar.animar_preparado.animar-zoom.ativo {
+  transform: scale(1);
+}
+
+/* delays */
+.animar.ativo.delay-1 { transition-delay: 0.1s; }
+.animar.ativo.delay-2 { transition-delay: 0.2s; }
+.animar.ativo.delay-3 { transition-delay: 0.3s; }
+.animar.ativo.delay-4 { transition-delay: 0.4s; }
+.animar.ativo.delay-5 { transition-delay: 0.5s; }
+.animar.ativo.delay-6 { transition-delay: 0.6s; }
+
+/* animação ao carregar a página */
+.animar-load {
+  opacity: 0;
+  animation: fadeLoad 1s ease forwards;
+}
+
+.animar-load-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animar-load-delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeLoad {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* acessibilidade: usr que configuraram sem animação */
+@media (prefers-reduced-motion: reduce) {
+  .animar,
+  .animar-load,
+  .categorias_card,
+  .produto_card,
+  .marca_item,
+  .btn_whatsapp,
+  .btn_whatsapp_fixo,
+  .btn_rede_sociais,
+  .footer_lista a,
+  .produtos_ver_mais,
+  .produto_btn {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletronica Cobra</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
     <!-- criar script para style responsivo -->
     <link rel="icon" href="img_padrao/mascote_cobra.png">
 </head>
@@ -14,11 +15,10 @@
 <body>
     <?php require 'header.php'; ?>
 
-
     <!-- IMAGEM FUNDO DA LOGO -->
     <section class="banner">
         <div class="banner_container">
-            <div class="logo">
+            <div class="logo animar-load animar-load-delay-1">
                 <img src="img_padrao/logo completa branca.png" alt="Nome do site" class="logo_img">
             </div>
         </div>
@@ -210,7 +210,7 @@
     <!-- SOBRE -->
     <section class="sobre" id="sobre">
         <div class="sobre_container">
-            <div class="sobre_topo">
+            <div class="sobre_topo animar animar_preparado animar_cima">
                 <h2 class="sobre_titulo">Sobre a <b>Eletrônica Cobra</b></h2>
                 <p class="sobre_subtitulo">
                     Há mais de 40 anos conectando pessoas à música em todo o Brasil, com paixão por instrumentos e
@@ -219,7 +219,7 @@
             </div>
 
             <div class="beneficios_container">
-                <div class="beneficio">
+                <div class="beneficio animar animar_preparado animar_cima delay-1">
                     <div class="beneficio_icone">
                         <img src="icons/nota_musical.png" alt="Nota Musical" width="30" height="30">
                     </div>
@@ -227,7 +227,7 @@
                     <p class="beneficio_texto">Milhares de produtos das<br>melhores marcas do mercado</p>
                 </div>
 
-                <div class="beneficio">
+                <div class="beneficio animar animar_preparado animar_cima delay-2">
                     <div class="beneficio_icone">
                         <img src="icons/distintivo.png" alt="Ícone de Qualidade" width="30" height="30">
                     </div>
@@ -235,7 +235,7 @@
                     <p class="beneficio_texto">Instrumentos testados e<br>aprovados por profissionais</p>
                 </div>
 
-                <div class="beneficio">
+                <div class="beneficio animar animar_preparado animar_cima delay-3">
                     <div class="beneficio_icone">
                         <img src="icons/relogio.png" alt="Ícone de Entrega Rápida" width="30" height="30">
                     </div>
@@ -243,7 +243,7 @@
                     <p class="beneficio_texto">Receba seus produtos com<br>segurança e rapidez</p>
                 </div>
 
-                <div class="beneficio">
+                <div class="beneficio animar animar_preparado animar_cima delay-4">
                     <div class="beneficio_icone">
                         <img src="icons/coracao.png" alt="Ícone de Coração" width="30" height="30">
                     </div>
@@ -252,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="sobre_amp">
+            <div class="sobre_amp animar animar_preparado animar_baixo delay-2">
                 <div class="amp_grade">
                     <div class="amp_item">
                         <div class="amp_num"><span class="amp_red">40</span>+</div>
@@ -276,14 +276,14 @@
         <div class="contato_container">
             <div class="contato_grid">
                 <!-- contato esquerda (mapa) -->
-                <div>
+                <div class="animar animar_preparado animar_esquerda">
                     <h2 class="contato_titulo">Entre em <b>Contato</b></h2>
                     <p class="contato_subtitulo">
                         Estamos prontos para ajudar você a encontrar o instrumento perfeito!
                         Visite nossa loja ou envie uma mensagem.
                     </p>
 
-                    <div class="mapa_container">
+                    <div class="mapa_container animar animar_preparado animar_cima delay-1">
                         <div class="mapa_container_topo">
                             <div class="mapa_titulo">Nossa loja</div>
                             <a class="mapa_link" href="https://maps.app.goo.gl/TSSWCdQ3NmGyscZQ6" target="_blank"
@@ -299,7 +299,7 @@
                         </div>
                     </div>
 
-                    <div class="contato_whatsapp">
+                    <div class="contato_whatsapp animar animar_preparado animar_cima delay-2">
                         <a class="frase_whatsapp">Ficou alguma dúvida?</a>
                         <a class="btn_whatsapp whatsapp_link" target="_blank" rel="noopener">
                             <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="20" height="20">
@@ -309,7 +309,7 @@
                 </div>
 
                 <!-- contato direita (formulário) -->
-                <div>
+                <div class="animar animar_preparado animar_direita">
                     <div class="form">
                         <h3>Envie a sua <b>mensagem</b></h3>
 
@@ -443,7 +443,6 @@
 
     <script src="styles/animacoes.js"></script>
 
-
     <script>
         // envia msg no wpp ao clicar no btn
         const telefone = "555491862723";
@@ -494,8 +493,6 @@
         iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
         iniciarSetas("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
         iniciarSetas("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
-    </scriptsrc=>
-
+        
+    </script>
 </body>
-
-</html>

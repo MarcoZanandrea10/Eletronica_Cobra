@@ -1,19 +1,21 @@
-console.log("Animacoes funcionam");
+document.addEventListener("DOMContentLoaded", () => {
+    const elementosAnimados = document.querySelectorAll(".animar");
 
-const sobre = document.querySelector(".sobre");
+    if (!elementosAnimados.length) return;
 
-if(sobre){
-    
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                console.log("seção sobre visível");
-                entry.target.classList.add("animar");
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("ativo");
+                obs.unobserve(entry.target);
             }
         });
-        
-    },{
-        threshold:0.3
+    }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -60px 0px"
     });
-    observer.observe(sobre);
-}
+
+    elementosAnimados.forEach(elemento => {
+        observer.observe(elemento);
+    });
+});

@@ -493,6 +493,7 @@
         iniciarSetas("marcasScroll", ".marcas_seta_esq", ".marcas_seta_dir");
         iniciarSetas("promocoesScroll", ".promocoes_seta_esq", ".promocoes_seta_dir");
         iniciarSetas("novidadesScroll", ".novidades_seta_esq", ".novidades_seta_dir");
-        
     </script>
 </body>
+
+</html>

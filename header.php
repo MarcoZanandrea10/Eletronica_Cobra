@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <!-- CABEÇALHO -->
     <header class="header">
@@ -30,7 +32,117 @@
             <div class="menu">
                 <nav class="nav">
                     <a href="#">Início</a>
-                    <a href="#produtos">Produtos</a>
+
+                    <div class="nav_produtos" id="navProdutos">
+                        <button href="#" class="nav_produtos_btn" type="button">Produtos</button>
+
+                        <div class="mega_menu">
+                            <div class="mega_menu_conteudo">
+
+                                <!-- menu de categorias -->
+                                <div class="mega_menu_categorias">
+                                    <button class="menu_categoria ativo" type="button" data-categoria="audio">Áudio</button>
+                                    <button class="menu_categoria" type="button" data-categoria="caixa_som">Caixa de Som</button>
+                                    <button class="menu_categoria" type="button" data-categoria="cordas">Cordas</button>
+                                    <button class="menu_categoria" type="button" data-categoria="teclas">Teclas</button>
+                                    <button class="menu_categoria" type="button" data-categoria="percussao">Percussão</button>
+                                    <button class="menu_categoria" type="button" data-categoria="sopro">Sopro</button>
+                                    <button class="menu_categoria" type="button" data-categoria="infantil">Infantil</button>
+                                    <button class="menu_categoria" type="button" data-categoria="bags">Bags</button>
+                                    <button class="menu_categoria" type="button" data-categoria="som_ambiente">Som Ambiente</button>
+                                    <button class="menu_categoria" type="button" data-categoria="acessorios">Acessórios</button>
+                                </div>
+
+                                <!-- produtos das categorias -->
+                                <div class="mega_menu_produtos">
+                                    <div class="categorias_produtos ativo" data-categoria="audio">
+                                        <a href="#">Microfones</a>
+                                        <a href="#">Mesas de Som</a>
+                                        <a href="#">Interfaces</a>
+                                        <a href="#">Fones</a>
+                                        <a href="#">Monitores</a>
+                                        <a href="#">Cabos</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="caixa_som">
+                                        <a href="#">Caixas Ativas</a>
+                                        <a href="#">Caixas Passivas</a>
+                                        <a href="#">Subwoofers</a>
+                                        <a href="#">Monitores de Palco</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="cordas">
+                                        <a href="#">Violões</a>
+                                        <a href="#">Guitarras</a>
+                                        <a href="#">Baixos</a>
+                                        <a href="#">Ukuleles</a>
+                                        <a href="#">Cordas Avulsas</a>
+                                        <a href="#">Capas e Bags</a>
+                                        <a href="#">Palhetas</a>
+                                        <a href="#">Correias</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="teclas">
+                                        <a href="#">Teclados</a>
+                                        <a href="#">Pianos Digitais</a>
+                                        <a href="#">Sintetizadores</a>
+                                        <a href="#">Controladores</a>
+                                        <a href="#">Arranjadores</a>
+                                        <a href="#">Suportes</a>
+                                        <a href="#">Pedais</a>
+                                        <a href="#">Bancos</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="percussao">
+                                        <a href="#">Baterias</a>
+                                        <a href="#">Pratos</a>
+                                        <a href="#">Baquetas</a>
+                                        <a href="#">Pedais</a>
+                                        <a href="#">Peles</a>
+                                        <a href="#">Percussão Geral</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="sopro">
+                                        <a href="#">Saxofones</a>
+                                        <a href="#">Flautas</a>
+                                        <a href="#">Clarinetes</a>
+                                        <a href="#">Trompetes</a>
+                                        <a href="#">Gaitas de Boca</a>
+                                        <a href="#">Acessórios</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="infantil">
+                                        <a href="#">Instrumentos Infantis</a>
+                                        <a href="#">Brinquedos Musicais</a>
+                                        <a href="#">Teclados Infantis</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="bags">
+                                        <a href="#">Bag para Violão</a>
+                                        <a href="#">Bag para Guitarra</a>
+                                        <a href="#">Capa para Teclado</a>
+                                        <a href="#">Cases</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="som_ambiente">
+                                        <a href="#">Caixas Ambiente</a>
+                                        <a href="#">Amplificadores</a>
+                                        <a href="#">Arandelas</a>
+                                        <a href="#">Acessórios de Instalação</a>
+                                    </div>
+
+                                    <div class="categorias_produtos" data-categoria="acessorios">
+                                        <a href="#">Afinadores</a>
+                                        <a href="#">Palhetas</a>
+                                        <a href="#">Cabos</a>
+                                        <a href="#">Suportes</a>
+                                        <a href="#">Fontes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <a href="#sobre">Sobre</a>
                     <a href="#contato">Contato</a>
                 </nav>
@@ -42,10 +154,50 @@
 
                 <button class="btn_header" type="button">
                     <img src="icons/login.png" alt="Ícone do login" width="20" height="20">
-                    <!-- Login -->
                 </button>
             </div>
         </div>
     </header>
 </body>
+
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuProdutos = document.getElementById("navProdutos");
+        if (!menuProdutos) return;
+
+        const titulo = document.getElementById("megaMenuTitulo");
+        const categorias = menuProdutos.querySelectorAll(".menu_categoria");
+        const paineis = menuProdutos.querySelectorAll(".categorias_produtos");
+
+        let timeoutFechar;
+
+        const setAtivo = (categoriaId, nomeCategoria) => {
+            categorias.forEach(item => item.classList.remove("ativo"));
+            paineis.forEach(item => item.classList.remove("ativo"));
+
+            menuProdutos.querySelector(`.menu_categoria[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
+            menuProdutos.querySelector(`.categorias_produtos[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
+
+            if (titulo) titulo.textContent = nomeCategoria;
+        };
+
+        menuProdutos.addEventListener("mouseenter", () => {
+            clearTimeout(timeoutFechar);
+            menuProdutos.classList.add("ativo");
+        });
+
+        menuProdutos.addEventListener("mouseleave", () => {
+            timeoutFechar = setTimeout(() => {
+                menuProdutos.classList.remove("ativo");
+            }, 120);
+        });
+
+        categorias.forEach(categoria => {
+            categoria.addEventListener("mouseenter", () => {
+                setAtivo(categoria.dataset.categoria, categoria.textContent.trim());
+            });
+        });
+    });
+</script>

@@ -16,7 +16,7 @@
         </div>
 
         <div class="header_container">
-            <a class="logo">
+            <a class="logo" href="index.php">
                 <div>
                     <img src="img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60px" height="60px">
                 </div>
@@ -31,10 +31,10 @@
 
             <div class="menu">
                 <nav class="nav">
-                    <a href="#">Início</a>
+                    <a href="index.php">Início</a>
 
                     <div class="nav_produtos" id="navProdutos">
-                        <button href="#" class="nav_produtos_btn" type="button">Produtos</button>
+                        <button class="nav_produtos_btn" type="button" onclick="window.location.href='produtos.php'">Produtos</button>
 
                         <div class="mega_menu">
                             <div class="mega_menu_conteudo">
@@ -143,8 +143,8 @@
                         </div>
                     </div>
 
-                    <a href="#sobre">Sobre</a>
-                    <a href="#contato">Contato</a>
+                    <a href="index.php#sobre">Sobre</a>
+                    <a href="index.php#contato">Contato</a>
                 </nav>
 
                 <button class="btn_header" type="button">

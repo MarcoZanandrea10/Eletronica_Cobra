@@ -37,16 +37,17 @@
                                 height="40">
                         </a>
                     </div>
-                </div>
+                </div>  
 
-                <!-- COL 2: Links rápidos -->
+                <!-- COL 2: Sobre Nós -->
+                <!-- ARRUMAR ESSA MERDA QUE ESTA TUDO ERRADO!!! -->
+                <!-- nao esta encontrado o caminho correto -->
                 <div class="footer_col">
-                    <h4 class="footer_titulo">Links Rápidos</h4>
+                    <h4 class="footer_titulo">Sobre Nós</h4>
                     <ul class="footer_lista">
-                        <li><a href="index.php">Início</a></li>
-                        <li><a href="produtos.php">Produtos</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="footer/nossa_historia.php">Nossa História</a></li>
+                        <li><a href="footer/nossa_equipe.php">Nossa Equipe</a></li>
+                        <li><a href="footer/nosso_ambiente.php">Nosso Ambiente</a></li>
                     </ul>
                 </div>
 

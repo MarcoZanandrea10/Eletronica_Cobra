@@ -12,16 +12,16 @@
 
 <body>
     <?php require 'header.php'; ?>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <?php require 'footer.php'; ?>
+
+
+
+
+
+
+
+
+
+    <?php require __DIR__ . '/footer/footer.php'; ?>
 </body>
 
 </html>

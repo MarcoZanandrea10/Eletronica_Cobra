@@ -1,3 +1,5 @@
+<?php $base = '/ELETRONICA_COBRA'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +16,7 @@
                 <!-- COL 1: Logo -->
                 <div class="footer_col">
                     <a class="footer_logo">
-                        <img src="img_padrao/mascote_cobra.png" alt="Logo Eletrônica Cobra" width="40" height="40">
+                        <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Logo Eletrônica Cobra" width="40" height="40">
                         <span class="footer_nome">ELETRÔNICA <b>COBRA</b></span>
                     </a>
 
@@ -24,16 +26,16 @@
 
                     <div class="footer_redes_sociais">
                         <a href="https://www.instagram.com/cobrainstrumentosmusicais/" target="_blank" rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/instagram.png" alt="Ícone do Instagram" width="40"
+                            <img class="btn_rede_sociais" src="<?= $base ?>/icons/instagram.png" alt="Ícone do Instagram" width="40"
                                 height="40">
                         </a>
                         <a href="https://www.facebook.com/cobrainstrumentosmusicais?locale=pt_BR" target="_blank"
                             rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/facebook.png" alt="Ícone do Facebook" width="40"
+                            <img class="btn_rede_sociais" src="<?= $base ?>/icons/facebook.png" alt="Ícone do Facebook" width="40"
                                 height="40">
                         </a>
                         <a href="https://www.tiktok.com/@eletronica.cobra" target="_blank" rel="noopener">
-                            <img class="btn_rede_sociais" src="icons/tiktok.png" alt="Ícone do TikTok" width="40"
+                            <img class="btn_rede_sociais" src="<?= $base ?>/icons/tiktok.png" alt="Ícone do TikTok" width="40"
                                 height="40">
                         </a>
                     </div>
@@ -45,9 +47,9 @@
                 <div class="footer_col">
                     <h4 class="footer_titulo">Sobre Nós</h4>
                     <ul class="footer_lista">
-                        <li><a href="footer/nossa_historia.php">Nossa História</a></li>
-                        <li><a href="footer/nossa_equipe.php">Nossa Equipe</a></li>
-                        <li><a href="footer/nosso_ambiente.php">Nosso Ambiente</a></li>
+                        <li><a href="<?= $base ?>/footer/nossa_historia.php">Nossa História</a></li>
+                        <li><a href="<?= $base ?>/footer/nossa_equipe.php">Nossa Equipe</a></li>
+                        <li><a href="<?= $base ?>/footer/nosso_ambiente.php">Nosso Ambiente</a></li>
                     </ul>
                 </div>
 
@@ -104,3 +106,4 @@
         </div>
     </footer>
 </body>
+</html>

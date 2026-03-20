@@ -1,13 +1,15 @@
+<?php $base = '/ELETRONICA_COBRA'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= $base ?>/styles/index.css">
+    <link rel="stylesheet" href="<?= $base ?>/styles/animacoes.css">
 </head>
 
 <body>
-    <!-- CABEÇALHO -->
     <header class="header">
         <div class="top_promo" id="topPromo">
             <a class="promo_text">
@@ -16,30 +18,28 @@
         </div>
 
         <div class="header_container">
-            <a class="logo" href="index.php">
+            <a class="logo" href="<?= $base ?>/index.php">
                 <div>
-                    <img src="img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60px" height="60px">
+                    <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60" height="60">
                 </div>
             </a>
 
             <div class="barra_pesquisa">
                 <div class="box_pesquisa">
-                    <img src="icons/lupa.png" alt="Ícone de lupa" class="icon_pesquisa" width="20" height="20">
+                    <img src="<?= $base ?>/icons/lupa.png" alt="Ícone de lupa" class="icon_pesquisa" width="20" height="20">
                     <input type="text" placeholder="Buscar guitarras, baterias, teclados...">
                 </div>
             </div>
 
             <div class="menu">
                 <nav class="nav">
-                    <a href="index.php">Início</a>
+                    <a href="<?= $base ?>/index.php">Início</a>
 
                     <div class="nav_produtos" id="navProdutos">
-                        <button class="nav_produtos_btn" type="button" onclick="window.location.href='produtos.php'">Produtos</button>
+                        <button class="nav_produtos_btn" type="button" onclick="window.location.href='<?= $base ?>/produtos.php'">Produtos</button>
 
                         <div class="mega_menu">
                             <div class="mega_menu_conteudo">
-
-                                <!-- menu de categorias -->
                                 <div class="mega_menu_categorias">
                                     <button class="menu_categoria ativo" type="button" data-categoria="audio">Áudio</button>
                                     <button class="menu_categoria" type="button" data-categoria="caixa_som">Caixa de Som</button>
@@ -53,7 +53,6 @@
                                     <button class="menu_categoria" type="button" data-categoria="acessorios">Acessórios</button>
                                 </div>
 
-                                <!-- produtos das categorias -->
                                 <div class="mega_menu_produtos">
                                     <div class="categorias_produtos ativo" data-categoria="audio">
                                         <a href="#">Microfones</a>
@@ -143,61 +142,58 @@
                         </div>
                     </div>
 
-                    <a href="index.php#sobre">Sobre</a>
-                    <a href="index.php#contato">Contato</a>
+                    <a href="<?= $base ?>/index.php#sobre">Sobre</a>
+                    <a href="<?= $base ?>/index.php#contato">Contato</a>
                 </nav>
 
                 <button class="btn_header" type="button">
-                    <img src="icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
+                    <img src="<?= $base ?>/icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
                     Carrinho
                 </button>
 
                 <button class="btn_header" type="button">
-                    <img src="icons/login.png" alt="Ícone do login" width="20" height="20">
+                    <img src="<?= $base ?>/icons/login.png" alt="Ícone do login" width="20" height="20">
                 </button>
             </div>
         </div>
     </header>
-</body>
 
-</html>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuProdutos = document.getElementById("navProdutos");
+            if (!menuProdutos) return;
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuProdutos = document.getElementById("navProdutos");
-        if (!menuProdutos) return;
+            const titulo = document.getElementById("megaMenuTitulo");
+            const categorias = menuProdutos.querySelectorAll(".menu_categoria");
+            const paineis = menuProdutos.querySelectorAll(".categorias_produtos");
 
-        const titulo = document.getElementById("megaMenuTitulo");
-        const categorias = menuProdutos.querySelectorAll(".menu_categoria");
-        const paineis = menuProdutos.querySelectorAll(".categorias_produtos");
+            let timeoutFechar;
 
-        let timeoutFechar;
+            const setAtivo = (categoriaId, nomeCategoria) => {
+                categorias.forEach(item => item.classList.remove("ativo"));
+                paineis.forEach(item => item.classList.remove("ativo"));
 
-        const setAtivo = (categoriaId, nomeCategoria) => {
-            categorias.forEach(item => item.classList.remove("ativo"));
-            paineis.forEach(item => item.classList.remove("ativo"));
+                menuProdutos.querySelector(`.menu_categoria[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
+                menuProdutos.querySelector(`.categorias_produtos[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
 
-            menuProdutos.querySelector(`.menu_categoria[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
-            menuProdutos.querySelector(`.categorias_produtos[data-categoria="${categoriaId}"]`)?.classList.add("ativo");
+                if (titulo) titulo.textContent = nomeCategoria;
+            };
 
-            if (titulo) titulo.textContent = nomeCategoria;
-        };
+            menuProdutos.addEventListener("mouseenter", () => {
+                clearTimeout(timeoutFechar);
+                menuProdutos.classList.add("ativo");
+            });
 
-        menuProdutos.addEventListener("mouseenter", () => {
-            clearTimeout(timeoutFechar);
-            menuProdutos.classList.add("ativo");
-        });
+            menuProdutos.addEventListener("mouseleave", () => {
+                timeoutFechar = setTimeout(() => {
+                    menuProdutos.classList.remove("ativo");
+                }, 120);
+            });
 
-        menuProdutos.addEventListener("mouseleave", () => {
-            timeoutFechar = setTimeout(() => {
-                menuProdutos.classList.remove("ativo");
-            }, 120);
-        });
-
-        categorias.forEach(categoria => {
-            categoria.addEventListener("mouseenter", () => {
-                setAtivo(categoria.dataset.categoria, categoria.textContent.trim());
+            categorias.forEach(categoria => {
+                categoria.addEventListener("mouseenter", () => {
+                    setAtivo(categoria.dataset.categoria, categoria.textContent.trim());
+                });
             });
         });
-    });
-</script>
+    </script>

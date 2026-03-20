@@ -346,7 +346,7 @@
         <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="30" height="30">
     </a>
     
-    <?php require 'footer.php'; ?>
+    <?php require 'footer/footer.php'; ?>
 
     <script src="styles/animacoes.js"></script>
 

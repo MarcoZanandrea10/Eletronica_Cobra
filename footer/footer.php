@@ -1,4 +1,4 @@
-<?php $base = '/ELETRONICA_COBRA'; ?>
+<?php $base = '/Cobra'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

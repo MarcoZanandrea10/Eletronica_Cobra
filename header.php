@@ -1,4 +1,4 @@
-<?php $base = '/ELETRONICA_COBRA'; ?>
+<?php $base = '/Cobra'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -75,10 +75,11 @@
                                         <a href="#">Guitarras</a>
                                         <a href="#">Baixos</a>
                                         <a href="#">Ukuleles</a>
+                                        <a href="#">Violinos</a>
                                         <a href="#">Cordas Avulsas</a>
-                                        <a href="#">Capas e Bags</a>
                                         <a href="#">Palhetas</a>
                                         <a href="#">Correias</a>
+                                        <a href="#">Capas e Bags</a>
                                     </div>
 
                                     <div class="categorias_produtos" data-categoria="teclas">
@@ -98,7 +99,7 @@
                                         <a href="#">Baquetas</a>
                                         <a href="#">Pedais</a>
                                         <a href="#">Peles</a>
-                                        <a href="#">Percussão Geral</a>
+                                        <a href="#">Percussão</a>
                                     </div>
 
                                     <div class="categorias_produtos" data-categoria="sopro">
@@ -131,6 +132,7 @@
                                     </div>
 
                                     <div class="categorias_produtos" data-categoria="acessorios">
+                                        <a href="#">Camisetas</a>
                                         <a href="#">Afinadores</a>
                                         <a href="#">Palhetas</a>
                                         <a href="#">Cabos</a>

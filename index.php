@@ -145,11 +145,6 @@
             <button class="marcas_seta marcas_seta_esq" type="button" aria-label="Ver marcas anteriores">‹</button>
 
             <div class="marcas_lista" id="marcasScroll" aria-label="Marcas">
-
-                <a class="marca_item" href="#">
-                    <img src="marcas/jbl.png" height="80px" width="auto">
-                </a>
-
                 <a class="marca_item" href="#">
                     <img src="marcas/casio.png" height="120px" width="auto">
                 </a>
@@ -188,6 +183,10 @@
 
                 <a class="marca_item" href="#">
                     <img src="marcas/behringer.png" height="60px" width="auto">
+                </a>
+
+                <a class="marca_item" href="#">
+                    <img src="marcas/jbl.png" height="80px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
@@ -345,7 +344,7 @@
     <a class="btn_whatsapp_fixo whatsapp_link" target="_blank">
         <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="30" height="30">
     </a>
-    
+
     <?php require 'footer/footer.php'; ?>
 
     <script src="styles/animacoes.js"></script>

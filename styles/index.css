@@ -118,50 +118,78 @@ body {
 }
 
 .mega_menu {
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  position: absolute;
-  overflow: hidden;
-  visibility: hidden;
   pointer-events: none;
-  left: 50%;
-  transform: translateX(-28%);
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  top: 126px;
+  left: 0;
   opacity: 0;
-  width: 400px;
-  z-index: 2000;
-  border-radius: 0 28px 28px 28px;
-  top: calc(100% + 18px);
-  transition: opacity 0.22s ease, visibility 0.22s ease;
+  width: 100vw;
+  z-index: 2500;
+  max-width: 100vw;
+  border-radius: 0 0 25px 25px;
+  transform: translateY(-18px);
+  transition: opacity 0.42s ease, transform 0.42s ease, visibility 0.42s ease;
 }
 
 .nav_produtos.ativo .mega_menu {
-  visibility: visible;
   pointer-events: auto;
+  visibility: visible;
   opacity: 1;
+  transform: translateY(0);
 }
 
 .mega_menu_conteudo {
+  overflow: hidden;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 0 0 25px 25px;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
 }
 
 .mega_menu_categorias {
   background: white;
-  flex-direction: column;
   display: flex;
-  padding: 18px 0;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 10px;
+  padding: 20px 28px;
+}
+
+.mega_menu_categorias {
+  background: white;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 10px;
+  padding: 20px;
 }
 
 .menu_categoria {
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
   color: black;
   background: none;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   border: none;
-  width: 100%;
-  font-size: 16px;
-  padding: 10px 28px;
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 10px 12px;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -173,17 +201,20 @@ body {
 
 .mega_menu_produtos {
   background: #f2f2f2;
-  padding: 22px 15px 22px 20px;
+  padding: 18px 24px 20px;
+  min-height: 100px;
 }
 
 .categorias_produtos {
   display: none;
-  flex-direction: column;
-  gap: 14px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-columns: minmax(140px, max-content);
+  gap: 8px 16px;
 }
 
 .categorias_produtos.ativo {
-  display: flex;
+  display: grid;  
 }
 
 .categorias_produtos a {
@@ -199,7 +230,6 @@ body {
 
 .btn_header {
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
-  box-shadow: 0 6px 18px rgba(225, 6, 18, .18);
   background: var(--vermelho);
   color: white;
   border: none;

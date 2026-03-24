@@ -1,6 +1,3 @@
-<?php require __DIR__ . '/../header.php'; ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,13 +16,13 @@
         }
 
         .ambiente {
-            background: #fff;
+            background: white;
             padding: 40px 0 90px;
         }
 
         .ambiente_margens {
-            max-width: 1200px;
             margin: 0 auto;
+            max-width: 1200px;
             padding: 0 24px;
         }
 
@@ -34,13 +31,13 @@
         }
 
         .ambiente_subtitulo {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 2px;
             color: var(--vermelho);
             text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
         .ambiente_topo h1 {
@@ -56,38 +53,40 @@
 
         .ambiente_intro_grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 35px;
             align-items: center;
+            gap: 35px;
+            grid-template-columns: 1.2fr 1fr;
         }
 
         .ambiente_intro_texto h2 {
             font-family: "Orbitron", Arial, Helvetica, sans-serif;
-            font-size: 1.8rem;
             color: var(--vermelho);
+            font-size: 1.8rem;
             margin-bottom: 18px;
         }
 
         .ambiente_intro_texto p {
-            font-size: 1rem;
             color: #555;
+            font-size: 1rem;
+            text-indent: 40px;
             line-height: 1.8;
             margin-bottom: 16px;
         }
 
-        .ambiente_intro_imagem {
-            border-radius: 22px;
+        .ambiente_foto_principal {
+            background: #f3f3f3;
             overflow: hidden;
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+            border-radius: 22px;
             min-height: 380px;
-            background: #f3f3f3;
         }
 
-        .ambiente_intro_imagem img {
-            width: 100%;
-            height: 100%;
+        .ambiente_foto_principal img,
+        .ambiente_foto img {
             object-fit: cover;
             display: block;
+            height: 100%;
+            width: 100%;
         }
 
         .ambiente_galeria {
@@ -95,18 +94,18 @@
         }
 
         .ambiente_titulo_bloco {
-            margin-bottom: 35px;
             text-align: center;
+            margin-bottom: 35px;
         }
 
         .ambiente_titulo_bloco span {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 2px;
             color: var(--vermelho);
             text-transform: uppercase;
+            display: block;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
         .ambiente_titulo_bloco h2 {
@@ -145,17 +144,12 @@
             grid-row: span 2;
             min-height: 540px;
         }
-
-        .ambiente_foto img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
     </style>
 </head>
 
 <body>
+    <?php require __DIR__ . '/../header.php'; ?>
+
     <main class="ambiente">
         <section class="ambiente_topo">
             <div class="ambiente_margens">
@@ -179,8 +173,8 @@
                     </p>
                 </div>
 
-                <div class="ambiente_intro_imagem">
-                    <img src="<?= $base ?>/img_padrao/ambiente_loja_1.jpg" alt="Ambiente interno da loja">
+                <div class="ambiente_foto_principal">
+                    <img src="<?= $base ?>/img_padrao/ambiente_loja_1.jpg" alt="Foto da loja">
                 </div>
             </div>
         </section>
@@ -190,9 +184,7 @@
                 <div class="ambiente_titulo_bloco">
                     <span>CONHEÇA A LOJA</span>
                     <h2>Alguns espaços do nosso ambiente</h2>
-                    <p>
-                        Um pouco da estrutura, dos detalhes e da atmosfera da Eletrônica Cobra.
-                    </p>
+                    <p>Um pouco da estrutura, dos detalhes e da atmosfera da Eletrônica Cobra.</p>
                 </div>
 
                 <div class="ambiente_fotos_grid">

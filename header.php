@@ -148,7 +148,7 @@
                     <a href="<?= $base ?>/index.php#contato">Contato</a>
                 </nav>
 
-                <button class="btn_header" type="button">
+                <button class="btn_header" type="button" id="abrirCarrinho">
                     <img src="<?= $base ?>/icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
                     Carrinho
                 </button>
@@ -159,6 +159,10 @@
             </div>
         </div>
     </header>
+
+    <div id="carrinhoContainer"></div>
+
+    <script src="<?= $base ?>/scripts/carrinho.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -199,3 +203,4 @@
             });
         });
     </script>
+</body>

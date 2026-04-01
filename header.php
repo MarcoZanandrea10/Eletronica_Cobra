@@ -1,4 +1,5 @@
 <?php $base = '/Cobra'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= $base ?>/styles/index.css">
     <link rel="stylesheet" href="<?= $base ?>/styles/animacoes.css">
+    <link rel="stylesheet" href="<?= $base; ?>/styles/carrinho.css">
 </head>
 
 <body>
@@ -148,21 +150,24 @@
                     <a href="<?= $base ?>/index.php#contato">Contato</a>
                 </nav>
 
-                <button class="btn_header" type="button" id="abrirCarrinho">
+                <a href="<?= $base ?>/carrinho.php" class="btn_header" id="abrirCarrinho">
                     <img src="<?= $base ?>/icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
                     Carrinho
-                </button>
+                </a>
 
-                <button class="btn_header" type="button">
+                <a class="btn_header">
                     <img src="<?= $base ?>/icons/login.png" alt="Ícone do login" width="20" height="20">
-                </button>
+                </a>
             </div>
         </div>
     </header>
 
-    <div id="carrinhoContainer"></div>
-
-    <script src="<?= $base ?>/scripts/carrinho.js"></script>
+    <?php
+    if (!isset($modoCarrinho) || $modoCarrinho !== 'pagina') {
+        $modoCarrinho = 'preview';
+        include __DIR__ . '/carrinho.php';
+    }
+    ?>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {

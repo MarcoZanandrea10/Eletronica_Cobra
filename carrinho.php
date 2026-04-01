@@ -1,375 +1,314 @@
 <?php
-$base = '/Cobra';
+$base = $base ?? '/Cobra';
+$modoCarrinho = $modoCarrinho ?? 'pagina';
+
+$itensCarrinho = [
+    [
+        'nome' => 'Violão Yamaha C40',
+        'categoria' => 'Cordas',
+        'preco' => 899.90,
+        'preco_pix' => 854.90,
+        'quantidade' => 1,
+        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+    ],
+    [
+        'nome' => 'Teclado Casio CT-S200',
+        'categoria' => 'Teclas',
+        'preco' => 1199.90,
+        'preco_pix' => 1139.90,
+        'quantidade' => 1,
+        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+    ],
+    [
+        'nome' => 'Microfone Shure SM58',
+        'categoria' => 'Áudio',
+        'preco' => 649.90,
+        'preco_pix' => 617.40,
+        'quantidade' => 1,
+        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+    ],
+];
+
+// $itensCarrinho = [];
+$carrinhoVazio = empty($itensCarrinho);
+
+function formatarPreco($valor)
+{
+    return 'R$ ' . number_format($valor, 2, ',', '.');
+}
+
+$subtotal = 0;
+$subtotalPix = 0;
+
+foreach ($itensCarrinho as $item) {
+    $subtotal += $item['preco'] * $item['quantidade'];
+    $subtotalPix += $item['preco_pix'] * $item['quantidade'];
+}
 ?>
 
-<div class="carrinho_overlay" id="carrinhoOverlay">
-    <aside class="carrinho_lateral" id="carrinhoLateral" aria-label="Carrinho de compras">
-        <div class="carrinho_topo">
-            <div class="carrinho_topo_texto">
+<?php if ($modoCarrinho === 'preview') { ?>
+
+    <div class="cobra-cart-backdrop" id="cobraCartBackdrop"></div>
+
+    <aside class="cobra-cart-drawer" id="cobraCartDrawer" aria-hidden="true">
+        <div class="cobra-cart-topbar">
+            <div>
                 <h2>Seu carrinho</h2>
-                <p>Revise seus produtos antes de finalizar a compra</p>
             </div>
 
-            <button type="button" class="fechar_carrinho" id="fecharCarrinho" aria-label="Fechar carrinho">
+            <button type="button" class="cobra-cart-close" id="cobraCartClose" aria-label="Fechar carrinho">
                 &times;
             </button>
         </div>
 
-        <div class="carrinho_conteudo">
-            <div class="item_carrinho">
-                <div class="item_carrinho_imagem_box">
-                    <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Violão Yamaha C40" class="item_carrinho_img">
-                </div>
-
-                <div class="item_carrinho_info">
-                    <h3>Violão Yamaha C40</h3>
-                    <p class="item_carrinho_categoria">Cordas</p>
-                    <p class="item_carrinho_preco">R$ 899,90</p>
-
-                    <div class="item_carrinho_acoes">
-                        <div class="controle_quantidade">
-                            <button type="button" aria-label="Diminuir quantidade">-</button>
-                            <span>1</span>
-                            <button type="button" aria-label="Aumentar quantidade">+</button>
-                        </div>
-
-                        <button type="button" class="remover_item">Remover</button>
+        <div class="cobra-cart-preview-body">
+            <div class="cobra-cart-preview-list">
+                <?php if ($carrinhoVazio): ?>
+                    <div class="cobra-cart-empty-preview">
+                        <div class="cobra-cart-empty-icon">🛒</div>
+                        <h3>Seu carrinho está vazio</h3>
+                        <p>Adicione alguns produtos para vê-los aqui.</p>
+                        <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
                     </div>
-                </div>
-            </div>
+                <?php else: ?>
+                    <?php foreach ($itensCarrinho as $item): ?>
+                        <div class="cobra-cart-item">
+                            <div class="cobra-cart-thumb">
+                                <img src="<?= $item['imagem']; ?>" alt="<?= htmlspecialchars($item['nome']); ?>">
+                            </div>
 
-            <div class="item_carrinho">
-                <div class="item_carrinho_imagem_box">
-                    <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Teclado Casio CT-S200" class="item_carrinho_img">
-                </div>
+                            <div class="cobra-cart-item-info">
+                                <h3><?= htmlspecialchars($item['nome']); ?></h3>
+                                <div class="cobra-cart-tag"><?= htmlspecialchars($item['categoria']); ?></div>
 
-                <div class="item_carrinho_info">
-                    <h3>Teclado Casio CT-S200</h3>
-                    <p class="item_carrinho_categoria">Teclas</p>
-                    <p class="item_carrinho_preco">R$ 1.199,90</p>
+                                <p class="cobra-cart-price"><?= formatarPreco($item['preco']); ?></p>
+                                <p class="cobra-cart-price-pix"><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</p>
 
-                    <div class="item_carrinho_acoes">
-                        <div class="controle_quantidade">
-                            <button type="button" aria-label="Diminuir quantidade">-</button>
-                            <span>1</span>
-                            <button type="button" aria-label="Aumentar quantidade">+</button>
+                                <div class="cobra-cart-actions">
+                                    <div class="cobra-cart-qty">
+                                        <button type="button">-</button>
+                                        <span><?= $item['quantidade']; ?></span>
+                                        <button type="button">+</button>
+                                    </div>
+
+                                    <button type="button" class="cobra-cart-remove">Remover</button>
+                                </div>
+                            </div>
                         </div>
-
-                        <button type="button" class="remover_item">Remover</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item_carrinho">
-                <div class="item_carrinho_imagem_box">
-                    <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Microfone Shure SM58" class="item_carrinho_img">
-                </div>
-
-                <div class="item_carrinho_info">
-                    <h3>Microfone Shure SM58</h3>
-                    <p class="item_carrinho_categoria">Áudio</p>
-                    <p class="item_carrinho_preco">R$ 649,90</p>
-
-                    <div class="item_carrinho_acoes">
-                        <div class="controle_quantidade">
-                            <button type="button" aria-label="Diminuir quantidade">-</button>
-                            <span>1</span>
-                            <button type="button" aria-label="Aumentar quantidade">+</button>
-                        </div>
-
-                        <button type="button" class="remover_item">Remover</button>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
 
-        <div class="carrinho_rodape">
-            <div class="carrinho_resumo">
-                <div class="linha_resumo">
-                    <span>Subtotal</span>
-                    <strong>R$ 2.749,70</strong>
+        <div class="cobra-cart-preview-footer">
+            <?php if ($carrinhoVazio): ?>
+                <div class="cobra-cart-empty-footer">
+                    <p>Seu carrinho ainda não tem produtos.</p>
+                    <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Começar a comprar</a>
+                </div>
+            <?php else: ?>
+                <div class="cobra-cart-summary">
+                    <div class="cobra-cart-row">
+                        <span>Subtotal</span>
+                        <span><?= formatarPreco($subtotal); ?></span>
+                    </div>
+
+                    <div class="cobra-cart-row">
+                        <span>PIX</span>
+                        <span><?= formatarPreco($subtotalPix); ?></span>
+                    </div>
+
+                    <div class="cobra-cart-row">
+                        <span>Frete</span>
+                        <span>A calcular</span>
+                    </div>
+
+                    <div class="cobra-cart-row total">
+                        <span>Total</span>
+                        <strong><?= formatarPreco($subtotal); ?></strong>
+                    </div>
                 </div>
 
-                <div class="linha_resumo">
-                    <span>Frete</span>
-                    <span>A calcular</span>
-                </div>
-            </div>
+                <a href="<?= $base; ?>/carrinho.php" class="cobra-cart-btn">Ver carrinho completo</a>
+                <a href="<?= $base; ?>/carrinho.php" class="cobra-cart-btn-secundario">Finalizar compra</a>
 
-            <div class="carrinho_botoes">
-                <button type="button" class="btn_finalizar">Finalizar compra</button>
-                <button type="button" class="btn_ver_carrinho">Ver carrinho completo</button>
-            </div>
+            <?php endif; ?>
         </div>
     </aside>
-</div>
 
-<style>
-    #carrinhoContainer .carrinho_overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.45);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: 9998;
-    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.cobraCartPreviewInit) return;
+            window.cobraCartPreviewInit = true;
 
-    #carrinhoContainer .carrinho_overlay.ativo {
-        opacity: 1;
-        visibility: visible;
-    }
+            const gatilho = document.getElementById('abrirCarrinho');
+            const drawer = document.getElementById('cobraCartDrawer');
+            const backdrop = document.getElementById('cobraCartBackdrop');
+            const fechar = document.getElementById('cobraCartClose');
 
-    #carrinhoContainer .carrinho_lateral {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 430px;
-        max-width: 100%;
-        height: 100%;
-        background: #ffffff;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.18);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        display: flex;
-        flex-direction: column;
-    }
+            if (!gatilho || !drawer || !backdrop) return;
 
-    #carrinhoContainer .carrinho_lateral.ativo {
-        transform: translateX(0);
-    }
+            let timerFechar = null;
 
-    #carrinhoContainer .carrinho_topo {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 22px 20px;
-        border-bottom: 1px solid #e9e9e9;
-    }
-
-    #carrinhoContainer .carrinho_topo_texto h2 {
-        margin: 0 0 6px;
-        font-size: 22px;
-        color: #111;
-    }
-
-    #carrinhoContainer .carrinho_topo_texto p {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-    }
-
-    #carrinhoContainer .fechar_carrinho {
-        background: none;
-        border: none;
-        font-size: 30px;
-        line-height: 1;
-        cursor: pointer;
-        color: #222;
-        padding: 0;
-    }
-
-    #carrinhoContainer .carrinho_conteudo {
-        flex: 1;
-        overflow-y: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    #carrinhoContainer .item_carrinho {
-        display: grid;
-        grid-template-columns: 90px 1fr;
-        gap: 14px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid #efefef;
-    }
-
-    #carrinhoContainer .item_carrinho_imagem_box {
-        width: 90px;
-        height: 90px;
-        border-radius: 10px;
-        background: #f5f5f5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    #carrinhoContainer .item_carrinho_img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #carrinhoContainer .item_carrinho_info h3 {
-        margin: 0 0 6px;
-        font-size: 16px;
-        color: #111;
-    }
-
-    #carrinhoContainer .item_carrinho_categoria {
-        margin: 0 0 8px;
-        font-size: 13px;
-        color: #777;
-    }
-
-    #carrinhoContainer .item_carrinho_preco {
-        margin: 0 0 12px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #111;
-    }
-
-    #carrinhoContainer .item_carrinho_acoes {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    #carrinhoContainer .controle_quantidade {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    #carrinhoContainer .controle_quantidade button {
-        width: 32px;
-        height: 32px;
-        border: 1px solid #d0d0d0;
-        background: #fff;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 18px;
-    }
-
-    #carrinhoContainer .controle_quantidade span {
-        min-width: 20px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    #carrinhoContainer .remover_item {
-        background: none;
-        border: none;
-        color: #c62828;
-        cursor: pointer;
-        font-size: 14px;
-        padding: 0;
-    }
-
-    #carrinhoContainer .carrinho_rodape {
-        padding: 20px;
-        border-top: 1px solid #e9e9e9;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        background: #fff;
-    }
-
-    #carrinhoContainer .carrinho_resumo {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #carrinhoContainer .linha_resumo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 15px;
-        color: #222;
-    }
-
-    #carrinhoContainer .linha_resumo strong {
-        font-size: 18px;
-    }
-
-    #carrinhoContainer .carrinho_botoes {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #carrinhoContainer .btn_finalizar,
-    #carrinhoContainer .btn_ver_carrinho {
-        width: 100%;
-        padding: 14px 16px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 15px;
-        font-weight: 700;
-        transition: 0.2s ease;
-    }
-
-    #carrinhoContainer .btn_finalizar {
-        background: #111;
-        color: #fff;
-        border: none;
-    }
-
-    #carrinhoContainer .btn_finalizar:hover {
-        background: #000;
-    }
-
-    #carrinhoContainer .btn_ver_carrinho {
-        background: #fff;
-        color: #111;
-        border: 1px solid #111;
-    }
-
-    #carrinhoContainer .btn_ver_carrinho:hover {
-        background: #f7f7f7;
-    }
-
-    body.carrinho_aberto {
-        overflow: hidden;
-    }
-</style>
-
-<script>
-    (function() {
-        if (window.carrinhoInicializado) return;
-        window.carrinhoInicializado = true;
-
-        function abrirCarrinho() {
-            const overlay = document.getElementById('carrinhoOverlay');
-            const lateral = document.getElementById('carrinhoLateral');
-
-            if (!overlay || !lateral) return;
-
-            overlay.classList.add('ativo');
-            lateral.classList.add('ativo');
-            document.body.classList.add('carrinho_aberto');
-        }
-
-        function fecharCarrinho() {
-            const overlay = document.getElementById('carrinhoOverlay');
-            const lateral = document.getElementById('carrinhoLateral');
-
-            if (!overlay || !lateral) return;
-
-            overlay.classList.remove('ativo');
-            lateral.classList.remove('ativo');
-            document.body.classList.remove('carrinho_aberto');
-        }
-
-        document.addEventListener('click', function(event) {
-            if (event.target.id === 'fecharCarrinho') {
-                fecharCarrinho();
+            function abrirCarrinho() {
+                clearTimeout(timerFechar);
+                drawer.classList.add('ativo');
+                backdrop.classList.add('ativo');
+                drawer.setAttribute('aria-hidden', 'false');
             }
 
-            if (event.target.id === 'carrinhoOverlay') {
-                fecharCarrinho();
+            function fecharCarrinhoComDelay() {
+                clearTimeout(timerFechar);
+                timerFechar = setTimeout(() => {
+                    drawer.classList.remove('ativo');
+                    backdrop.classList.remove('ativo');
+                    drawer.setAttribute('aria-hidden', 'true');
+                }, 160);
             }
+
+            function fecharCarrinhoAgora() {
+                clearTimeout(timerFechar);
+                drawer.classList.remove('ativo');
+                backdrop.classList.remove('ativo');
+                drawer.setAttribute('aria-hidden', 'true');
+            }
+
+            gatilho.addEventListener('mouseenter', abrirCarrinho);
+            gatilho.addEventListener('mouseleave', fecharCarrinhoComDelay);
+
+            drawer.addEventListener('mouseenter', abrirCarrinho);
+            drawer.addEventListener('mouseleave', fecharCarrinhoComDelay);
+
+            fechar?.addEventListener('click', fecharCarrinhoAgora);
+            backdrop.addEventListener('click', fecharCarrinhoAgora);
+
+            document.addEventListener('keydown', function(evento) {
+                if (evento.key === 'Escape') {
+                    fecharCarrinhoAgora();
+                }
+            });
         });
+    </script>
 
-        window.abrirCarrinhoLateral = abrirCarrinho;
-        window.fecharCarrinhoLateral = fecharCarrinho;
-    })();
-</script>
+<?php } else { ?>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho - Eletrônica Cobra</title>
+        <link rel="stylesheet" href="<?= $base; ?>/styles/index.css">
+        <link rel="stylesheet" href="<?= $base; ?>/styles/animacoes.css">
+        <link rel="stylesheet" href="<?= $base; ?>/styles/carrinho.css">
+        <link rel="icon" href="<?= $base; ?>/img_padrao/mascote_cobra.png">
+    </head>
+
+    <body>
+        <?php require __DIR__ . '/header.php'; ?>
+
+        <main class="cobra-cart-page-main">
+            <div class="cobra-cart-page-wrap">
+                <section class="cobra-cart-hero">
+                    <p class="cobra-cart-kicker">Carrinho Eletrônica Cobra</p>
+                    <h1 class="cobra-cart-page-title">Seu setup está quase pronto</h1>
+                    <p class="cobra-cart-page-subtitle">
+                        Revise seus produtos, confira o resumo do pedido e siga para a finalização.
+                        Mantive esta tela com a mesma linguagem visual do restante do site:
+                        contraste forte, vermelho em destaque, blocos arredondados e títulos com Orbitron.
+                    </p>
+                </section>
+
+                <?php if ($carrinhoVazio): ?>
+                    <section class="cobra-cart-page-empty">
+                        <div class="cobra-cart-page-empty-box">
+                            <div class="cobra-cart-empty-icon">🛒</div>
+                            <h2>Seu carrinho está vazio</h2>
+                            <p>Você ainda não adicionou nenhum produto ao carrinho.</p>
+                            <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
+                        </div>
+                    </section>
+                <?php else: ?>
+                    <section class="cobra-cart-page-grid">
+                        <div class="cobra-cart-page-card cobra-cart-page-list-card">
+                            <div class="cobra-cart-page-card-head">
+                                <h2>Produtos no carrinho</h2>
+                                <span><?= count($itensCarrinho); ?> itens</span>
+                            </div>
+
+                            <?php foreach ($itensCarrinho as $item): ?>
+                                <article class="cobra-cart-page-item">
+                                    <div class="cobra-cart-page-thumb">
+                                        <img src="<?= $item['imagem']; ?>" alt="<?= htmlspecialchars($item['nome']); ?>">
+                                    </div>
+
+                                    <div class="cobra-cart-page-info">
+                                        <h3><?= htmlspecialchars($item['nome']); ?></h3>
+                                        <div class="cobra-cart-tag"><?= htmlspecialchars($item['categoria']); ?></div>
+
+                                        <p class="cobra-cart-page-desc">
+                                            Produto em modo visual para a montagem inicial da interface.
+                                        </p>
+
+                                        <div class="cobra-cart-page-price">
+                                            <strong><?= formatarPreco($item['preco']); ?></strong>
+                                            <span><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cobra-cart-page-side">
+                                        <div class="cobra-cart-qty">
+                                            <button type="button">-</button>
+                                            <span><?= $item['quantidade']; ?></span>
+                                            <button type="button">+</button>
+                                        </div>
+
+                                        <button type="button" class="cobra-cart-remove">Remover</button>
+                                    </div>
+                                </article>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <aside class="cobra-cart-page-card cobra-cart-side-box">
+                            <h2>Resumo do pedido</h2>
+
+                            <div class="cobra-cart-summary">
+                                <div class="cobra-cart-row">
+                                    <span>Subtotal</span>
+                                    <span><?= formatarPreco($subtotal); ?></span>
+                                </div>
+
+                                <div class="cobra-cart-row">
+                                    <span>Desconto PIX</span>
+                                    <span><?= formatarPreco($subtotal - $subtotalPix); ?></span>
+                                </div>
+
+                                <div class="cobra-cart-row">
+                                    <span>Frete</span>
+                                    <span>A calcular</span>
+                                </div>
+
+                                <div class="cobra-cart-row total">
+                                    <span>Total</span>
+                                    <strong><?= formatarPreco($subtotal); ?></strong>
+                                </div>
+                            </div>
+
+                            <div class="cobra-cart-coupon">
+                                <input type="text" placeholder="Cupom de desconto">
+                                <button type="button">Aplicar</button>
+                            </div>
+
+                            <a href="#" class="cobra-cart-btn">Finalizar compra</a>
+                            <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn-secundario">Continuar comprando</a>
+                        </aside>
+                    </section>
+                <?php endif; ?>
+            </div>
+        </main>
+
+        <?php require __DIR__ . '/footer/footer.php'; ?>
+    </body>
+
+    </html>
+<?php } ?>

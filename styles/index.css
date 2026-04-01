@@ -234,13 +234,15 @@ body {
   color: white;
   border: none;
   display: flex;
+  text-decoration: none;
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
   height: 40px;
   padding: 0 14px;
   gap: 10px;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .btn_header:hover {

@@ -2,6 +2,7 @@
 $base = $base ?? '/Cobra';
 $modoCarrinho = $modoCarrinho ?? 'pagina';
 
+// simulação de itens no carrinho
 $itensCarrinho = [
     [
         'nome' => 'Violão Yamaha C40',

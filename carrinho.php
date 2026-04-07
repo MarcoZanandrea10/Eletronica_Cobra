@@ -6,7 +6,6 @@ $modoCarrinho = $modoCarrinho ?? 'pagina';
 $itensCarrinho = [
     [
         'nome' => 'Violão Yamaha C40',
-        'categoria' => 'Cordas',
         'preco' => 899.90,
         'preco_pix' => 854.90,
         'quantidade' => 1,
@@ -14,7 +13,6 @@ $itensCarrinho = [
     ],
     [
         'nome' => 'Teclado Casio CT-S200',
-        'categoria' => 'Teclas',
         'preco' => 1199.90,
         'preco_pix' => 1139.90,
         'quantidade' => 1,
@@ -22,7 +20,6 @@ $itensCarrinho = [
     ],
     [
         'nome' => 'Microfone Shure SM58',
-        'categoria' => 'Áudio',
         'preco' => 649.90,
         'preco_pix' => 617.40,
         'quantidade' => 1,
@@ -52,12 +49,12 @@ foreach ($itensCarrinho as $item) {
     <div class="cobra-cart-backdrop" id="cobraCartBackdrop"></div>
 
     <aside class="cobra-cart-drawer" id="cobraCartDrawer" aria-hidden="true">
-        <div class="cobra-cart-topbar">
+        <div class="footer_carrinho">
             <div>
                 <h2>Seu carrinho</h2>
             </div>
 
-            <button type="button" class="cobra-cart-close" id="cobraCartClose" aria-label="Fechar carrinho">
+            <button type="button" class="fechar_carrinho" id="cobraCartClose">
                 &times;
             </button>
         </div>
@@ -66,7 +63,10 @@ foreach ($itensCarrinho as $item) {
             <div class="cobra-cart-preview-list">
                 <?php if ($carrinhoVazio): ?>
                     <div class="cobra-cart-empty-preview">
-                        <div class="cobra-cart-empty-icon">🛒</div>
+                        <div class="icon_carrinho">
+                            <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
+                        </div>
+
                         <h3>Seu carrinho está vazio</h3>
                         <p>Adicione alguns produtos para vê-los aqui.</p>
                         <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
@@ -74,21 +74,20 @@ foreach ($itensCarrinho as $item) {
                 <?php else: ?>
                     <?php foreach ($itensCarrinho as $item): ?>
                         <div class="cobra-cart-item">
-                            <div class="cobra-cart-thumb">
+                            <div class="img_item">
                                 <img src="<?= $item['imagem']; ?>" alt="<?= htmlspecialchars($item['nome']); ?>">
                             </div>
 
                             <div class="cobra-cart-item-info">
                                 <h3><?= htmlspecialchars($item['nome']); ?></h3>
-                                <div class="cobra-cart-tag"><?= htmlspecialchars($item['categoria']); ?></div>
 
-                                <p class="cobra-cart-price"><?= formatarPreco($item['preco']); ?></p>
-                                <p class="cobra-cart-price-pix"><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</p>
+                                <p class="preco_item"><?= formatarPreco($item['preco']); ?></p>
+                                <p class="preco_item_pix"><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</p>
 
                                 <div class="cobra-cart-actions">
                                     <div class="cobra-cart-qty">
                                         <button type="button">-</button>
-                                        <span><?= $item['quantidade']; ?></span>
+                                        <a><?= $item['quantidade']; ?></a>
                                         <button type="button">+</button>
                                     </div>
 
@@ -109,23 +108,23 @@ foreach ($itensCarrinho as $item) {
                 </div>
             <?php else: ?>
                 <div class="cobra-cart-summary">
-                    <div class="cobra-cart-row">
-                        <span>Subtotal</span>
-                        <span><?= formatarPreco($subtotal); ?></span>
+                    <div class="pagamento_item">
+                        <a>Subtotal</a>
+                        <a><?= formatarPreco($subtotal); ?></a>
                     </div>
 
-                    <div class="cobra-cart-row">
-                        <span>PIX</span>
-                        <span><?= formatarPreco($subtotalPix); ?></span>
+                    <div class="pagamento_item">
+                        <a>PIX</a>
+                        <a><?= formatarPreco($subtotalPix); ?></a>
                     </div>
 
-                    <div class="cobra-cart-row">
-                        <span>Frete</span>
-                        <span>A calcular</span>
+                    <div class="pagamento_item">
+                        <a>Frete</a>
+                        <a>A calcular</a>
                     </div>
 
-                    <div class="cobra-cart-row total">
-                        <span>Total</span>
+                    <div class="pagamento_item total">
+                        <a>Total</a>
                         <strong><?= formatarPreco($subtotal); ?></strong>
                     </div>
                 </div>
@@ -223,7 +222,10 @@ foreach ($itensCarrinho as $item) {
                 <?php if ($carrinhoVazio): ?>
                     <section class="cobra-cart-page-empty">
                         <div class="cobra-cart-page-empty-box">
-                            <div class="cobra-cart-empty-icon">🛒</div>
+                            <div class="icon_carrinho">
+                                <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
+                            </div>
+
                             <h2>Seu carrinho está vazio</h2>
                             <p>Você ainda não adicionou nenhum produto ao carrinho.</p>
                             <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
@@ -234,7 +236,7 @@ foreach ($itensCarrinho as $item) {
                         <div class="cobra-cart-page-card cobra-cart-page-list-card">
                             <div class="cobra-cart-page-card-head">
                                 <h2>Produtos no carrinho</h2>
-                                <span><?= count($itensCarrinho); ?> itens</span>
+                                <a><?= count($itensCarrinho); ?> itens</a>
                             </div>
 
                             <?php foreach ($itensCarrinho as $item): ?>
@@ -245,7 +247,6 @@ foreach ($itensCarrinho as $item) {
 
                                     <div class="cobra-cart-page-info">
                                         <h3><?= htmlspecialchars($item['nome']); ?></h3>
-                                        <div class="cobra-cart-tag"><?= htmlspecialchars($item['categoria']); ?></div>
 
                                         <p class="cobra-cart-page-desc">
                                             Produto em modo visual para a montagem inicial da interface.
@@ -253,14 +254,14 @@ foreach ($itensCarrinho as $item) {
 
                                         <div class="cobra-cart-page-price">
                                             <strong><?= formatarPreco($item['preco']); ?></strong>
-                                            <span><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</span>
+                                            <a><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</a>
                                         </div>
                                     </div>
 
                                     <div class="cobra-cart-page-side">
                                         <div class="cobra-cart-qty">
                                             <button type="button">-</button>
-                                            <span><?= $item['quantidade']; ?></span>
+                                            <a><?= $item['quantidade']; ?></a>
                                             <button type="button">+</button>
                                         </div>
 
@@ -274,23 +275,23 @@ foreach ($itensCarrinho as $item) {
                             <h2>Resumo do pedido</h2>
 
                             <div class="cobra-cart-summary">
-                                <div class="cobra-cart-row">
-                                    <span>Subtotal</span>
-                                    <span><?= formatarPreco($subtotal); ?></span>
+                                <div class="pagamento_item">
+                                    <a>Subtotal</a>
+                                    <a><?= formatarPreco($subtotal); ?></a>
                                 </div>
 
-                                <div class="cobra-cart-row">
-                                    <span>Desconto PIX</span>
-                                    <span><?= formatarPreco($subtotal - $subtotalPix); ?></span>
+                                <div class="pagamento_item">
+                                    <a>Desconto PIX</a>
+                                    <a><?= formatarPreco($subtotal - $subtotalPix); ?></a>
                                 </div>
 
-                                <div class="cobra-cart-row">
-                                    <span>Frete</span>
-                                    <span>A calcular</span>
+                                <div class="pagamento_item">
+                                    <a>Frete</a>
+                                    <a>A calcular</a>
                                 </div>
 
-                                <div class="cobra-cart-row total">
-                                    <span>Total</span>
+                                <div class="pagamento_item total">
+                                    <a>Total</a>
                                     <strong><?= formatarPreco($subtotal); ?></strong>
                                 </div>
                             </div>

@@ -68,7 +68,6 @@
         .ambiente_intro_texto p {
             color: #555;
             font-size: 1rem;
-            text-indent: 40px;
             line-height: 1.8;
             margin-bottom: 16px;
         }

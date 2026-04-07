@@ -20,7 +20,6 @@
 
 
 
-
     <?php require __DIR__ . '/footer/footer.php'; ?>
 </body>
 

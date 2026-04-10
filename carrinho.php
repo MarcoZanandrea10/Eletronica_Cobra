@@ -46,9 +46,9 @@ foreach ($itensCarrinho as $item) {
 
 <?php if ($modoCarrinho === 'preview') { ?>
 
-    <div class="cobra-cart-backdrop" id="cobraCartBackdrop"></div>
+    <div class="car_lateral" id="cobraCartBackdrop"></div>
 
-    <aside class="cobra-cart-drawer" id="cobraCartDrawer" aria-hidden="true">
+    <aside class="container_car_lateral" id="cobraCartDrawer" aria-hidden="true">
         <div class="footer_carrinho">
             <div>
                 <h2>Seu carrinho</h2>
@@ -59,39 +59,39 @@ foreach ($itensCarrinho as $item) {
             </button>
         </div>
 
-        <div class="cobra-cart-preview-body">
-            <div class="cobra-cart-preview-list">
+        <div class="itens_car_lateral">
+            <div class="itens_car_lateral_lista">
                 <?php if ($carrinhoVazio): ?>
-                    <div class="cobra-cart-empty-preview">
+                    <div class="container_car_vazio_lateral">
                         <div class="icon_carrinho">
                             <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
                         </div>
 
                         <h3>Seu carrinho está vazio</h3>
                         <p>Adicione alguns produtos para vê-los aqui.</p>
-                        <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
+                        <a href="<?= $base; ?>/produtos.php" class="btn_geral_car">Ver produtos</a>
                     </div>
                 <?php else: ?>
                     <?php foreach ($itensCarrinho as $item): ?>
-                        <div class="cobra-cart-item">
+                        <div class="item_car_lateral">
                             <div class="img_item">
                                 <img src="<?= $item['imagem']; ?>" alt="<?= htmlspecialchars($item['nome']); ?>">
                             </div>
 
-                            <div class="cobra-cart-item-info">
+                            <div class="item_car_lateral_info">
                                 <h3><?= htmlspecialchars($item['nome']); ?></h3>
 
                                 <p class="preco_item"><?= formatarPreco($item['preco']); ?></p>
                                 <p class="preco_item_pix"><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</p>
 
-                                <div class="cobra-cart-actions">
-                                    <div class="cobra-cart-qty">
+                                <div class="btn_car_lateral">
+                                    <div class="btn_qtd_car">
                                         <button type="button">-</button>
                                         <a><?= $item['quantidade']; ?></a>
                                         <button type="button">+</button>
                                     </div>
 
-                                    <button type="button" class="cobra-cart-remove">Remover</button>
+                                    <button type="button" class="btn_remover_item_car">Remover</button>
                                 </div>
                             </div>
                         </div>
@@ -100,14 +100,14 @@ foreach ($itensCarrinho as $item) {
             </div>
         </div>
 
-        <div class="cobra-cart-preview-footer">
+        <div class="container_pagamento_car_lateral">
             <?php if ($carrinhoVazio): ?>
-                <div class="cobra-cart-empty-footer">
+                <div class="car_vazio_box_lateral">
                     <p>Seu carrinho ainda não tem produtos.</p>
-                    <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Começar a comprar</a>
+                    <a href="<?= $base; ?>/produtos.php" class="btn_geral_car">Começar a comprar</a>
                 </div>
             <?php else: ?>
-                <div class="cobra-cart-summary">
+                <div class="container_pagamento_car">
                     <div class="pagamento_item">
                         <a>Subtotal</a>
                         <a><?= formatarPreco($subtotal); ?></a>
@@ -129,8 +129,8 @@ foreach ($itensCarrinho as $item) {
                     </div>
                 </div>
 
-                <a href="<?= $base; ?>/carrinho.php" class="cobra-cart-btn">Ver carrinho completo</a>
-                <a href="<?= $base; ?>/carrinho.php" class="cobra-cart-btn-secundario">Finalizar compra</a>
+                <a href="<?= $base; ?>/carrinho.php" class="btn_geral_car">Ver carrinho completo</a>
+                <a href="<?= $base; ?>/carrinho.php" class="btn_geral_car_secundario">Finalizar compra</a>
 
             <?php endif; ?>
         </div>
@@ -197,7 +197,7 @@ foreach ($itensCarrinho as $item) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrinho - Eletrônica Cobra</title>
+        <title>Eletrônica Cobra</title>
         <link rel="stylesheet" href="<?= $base; ?>/styles/index.css">
         <link rel="stylesheet" href="<?= $base; ?>/styles/animacoes.css">
         <link rel="stylesheet" href="<?= $base; ?>/styles/carrinho.css">
@@ -207,74 +207,66 @@ foreach ($itensCarrinho as $item) {
     <body>
         <?php require __DIR__ . '/header.php'; ?>
 
-        <main class="cobra-cart-page-main">
-            <div class="cobra-cart-page-wrap">
-                <section class="cobra-cart-hero">
-                    <p class="cobra-cart-kicker">Carrinho Eletrônica Cobra</p>
-                    <h1 class="cobra-cart-page-title">Seu setup está quase pronto</h1>
-                    <p class="cobra-cart-page-subtitle">
-                        Revise seus produtos, confira o resumo do pedido e siga para a finalização.
-                        Mantive esta tela com a mesma linguagem visual do restante do site:
-                        contraste forte, vermelho em destaque, blocos arredondados e títulos com Orbitron.
-                    </p>
+        <main>
+            <div class="container_car">
+                <section class="container_titulo_pedido_car">
+                    <p>Seu carrinho</p>
+                    <h1>Confira seu pedido</h1>
+                    <a>Veja os produtos e finalize sua compra.</a>
                 </section>
 
                 <?php if ($carrinhoVazio): ?>
-                    <section class="cobra-cart-page-empty">
-                        <div class="cobra-cart-page-empty-box">
+                    <section class="container_car_vazio">
+                        <div class="car_vazio_box">
                             <div class="icon_carrinho">
                                 <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
                             </div>
 
                             <h2>Seu carrinho está vazio</h2>
                             <p>Você ainda não adicionou nenhum produto ao carrinho.</p>
-                            <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn">Ver produtos</a>
+                            <a href="<?= $base; ?>/produtos.php" class="btn_geral_car">Ver produtos</a>
                         </div>
                     </section>
                 <?php else: ?>
-                    <section class="cobra-cart-page-grid">
-                        <div class="cobra-cart-page-card cobra-cart-page-list-card">
-                            <div class="cobra-cart-page-card-head">
+                    <section class="container_itens_car">
+                        <div class="itens_pedido_car lista_itens_pedido_car">
+                            <div class="titulo_itens_pedido_car">
                                 <h2>Produtos no carrinho</h2>
                                 <a><?= count($itensCarrinho); ?> itens</a>
                             </div>
 
                             <?php foreach ($itensCarrinho as $item): ?>
-                                <article class="cobra-cart-page-item">
-                                    <div class="cobra-cart-page-thumb">
+                                <article class="container_item_pedido_car">
+                                    <div class="img_item_pedido_car">
                                         <img src="<?= $item['imagem']; ?>" alt="<?= htmlspecialchars($item['nome']); ?>">
                                     </div>
 
-                                    <div class="cobra-cart-page-info">
+                                    <div class="nome_item_pedido_car">
                                         <h3><?= htmlspecialchars($item['nome']); ?></h3>
 
-                                        <p class="cobra-cart-page-desc">
-                                            Produto em modo visual para a montagem inicial da interface.
-                                        </p>
-
-                                        <div class="cobra-cart-page-price">
+                                        <div class="preco_item_pedido_car">
                                             <strong><?= formatarPreco($item['preco']); ?></strong>
                                             <a><?= formatarPreco($item['preco_pix']); ?> à vista no PIX</a>
                                         </div>
                                     </div>
 
-                                    <div class="cobra-cart-page-side">
-                                        <div class="cobra-cart-qty">
+                                    <div class="qtd_e_remover_item_car">
+                                        <div class="btn_qtd_car">
                                             <button type="button">-</button>
                                             <a><?= $item['quantidade']; ?></a>
                                             <button type="button">+</button>
                                         </div>
 
-                                        <button type="button" class="cobra-cart-remove">Remover</button>
+                                        <button type="button" class="btn_remover_item_car">Remover</button>
                                     </div>
                                 </article>
                             <?php endforeach; ?>
                         </div>
 
-                        <aside class="cobra-cart-page-card cobra-cart-side-box">
+                        <aside class="itens_pedido_car box_itens_pedido_car">
                             <h2>Resumo do pedido</h2>
 
-                            <div class="cobra-cart-summary">
+                            <div class="container_pagamento_car">
                                 <div class="pagamento_item">
                                     <a>Subtotal</a>
                                     <a><?= formatarPreco($subtotal); ?></a>
@@ -296,14 +288,20 @@ foreach ($itensCarrinho as $item) {
                                 </div>
                             </div>
 
-                            <div class="cobra-cart-coupon">
+                            <div class="cupom_desconto_car">
                                 <input type="text" placeholder="Cupom de desconto">
                                 <button type="button">Aplicar</button>
                             </div>
 
-                            <a href="#" class="cobra-cart-btn">Finalizar compra</a>
-                            <a href="<?= $base; ?>/produtos.php" class="cobra-cart-btn-secundario">Continuar comprando</a>
+                            <a href="#" class="btn_geral_car">Finalizar compra</a>
+                            <a href="<?= $base; ?>/produtos.php" class="btn_geral_car_secundario">Continuar comprando</a>
                         </aside>
+
+                        <!-- BTN WPP FIXO NA PÁGINA -->
+                        <a class="btn_whatsapp_fixo whatsapp_link" target="_blank">
+                            <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="30" height="30">
+                        </a>
+
                     </section>
                 <?php endif; ?>
             </div>

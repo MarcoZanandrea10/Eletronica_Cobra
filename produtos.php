@@ -18,7 +18,10 @@
 
 
 
-
+    <!-- BTN WPP FIXO NA PÁGINA -->
+    <a class="btn_whatsapp_fixo whatsapp_link" target="_blank">
+        <img src="icons/whatsapp.png" alt="Ícone do WhatsApp" width="30" height="30">
+    </a>
 
     <?php require __DIR__ . '/footer/footer.php'; ?>
 </body>

@@ -5,25 +5,25 @@ $modoCarrinho = $modoCarrinho ?? 'pagina';
 // simulação de itens no carrinho
 $itensCarrinho = [
     [
-        'nome' => 'Violão Yamaha C40',
+        'nome' => 'Guitarra Fender Stratocaster',
         'preco' => 899.90,
         'preco_pix' => 854.90,
         'quantidade' => 1,
-        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+        'imagem' => $base . '/img/img_produtos/guitarra1.png'
     ],
     [
-        'nome' => 'Teclado Casio CT-S200',
+        'nome' => 'Guitarra Gibson Les Paul',
         'preco' => 1199.90,
         'preco_pix' => 1139.90,
         'quantidade' => 1,
-        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+        'imagem' => $base . '/img/img_produtos/guitarra2.png'
     ],
     [
-        'nome' => 'Microfone Shure SM58',
+        'nome' => 'Bateria Pearl Export',
         'preco' => 649.90,
         'preco_pix' => 617.40,
         'quantidade' => 1,
-        'imagem' => $base . '/img_padrao/mascote_cobra.png'
+        'imagem' => $base . '/img/img_produtos/bateria1.png'
     ],
 ];
 
@@ -201,7 +201,7 @@ foreach ($itensCarrinho as $item) {
         <link rel="stylesheet" href="<?= $base; ?>/styles/index.css">
         <link rel="stylesheet" href="<?= $base; ?>/styles/animacoes.css">
         <link rel="stylesheet" href="<?= $base; ?>/styles/carrinho.css">
-        <link rel="icon" href="<?= $base; ?>/img_padrao/mascote_cobra.png">
+        <link rel="icon" href="<?= $base; ?>/img/img_padrao/mascote_cobra.png">
     </head>
 
     <body>

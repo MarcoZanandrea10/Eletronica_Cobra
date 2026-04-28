@@ -22,7 +22,7 @@
         <div class="header_container">
             <a class="logo" href="<?= $base ?>/index.php">
                 <div>
-                    <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60" height="60">
+                    <img src="<?= $base ?>/img/img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60" height="60">
                 </div>
             </a>
 

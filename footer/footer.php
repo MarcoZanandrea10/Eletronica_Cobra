@@ -16,7 +16,7 @@
                 <!-- COL 1: Logo -->
                 <div class="footer_col">
                     <a class="footer_logo">
-                        <img src="<?= $base ?>/img_padrao/mascote_cobra.png" alt="Logo Eletrônica Cobra" width="40" height="40">
+                        <img src="<?= $base ?>/img/img_padrao/mascote_cobra.png" alt="Logo Eletrônica Cobra" width="40" height="40">
                         <span class="footer_nome">ELETRÔNICA <b>COBRA</b></span>
                     </a>
 

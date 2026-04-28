@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/animacoes.css">
     <!-- criar script para style responsivo -->
-    <link rel="icon" href="img_padrao/mascote_cobra.png">
+    <link rel="icon" href="img/img_padrao/mascote_cobra.png">
 </head>
 
 
@@ -19,7 +19,7 @@
     <section class="banner">
         <div class="banner_container">
             <div class="logo animar-load animar-load-delay-1">
-                <img src="img_padrao/logo completa branca.png" alt="Nome do site" class="logo_img">
+                <img src="img/img_padrao/logo completa branca.png" alt="Nome do site" class="logo_img">
             </div>
         </div>
     </section>
@@ -66,14 +66,14 @@
                     <div class="produto_badge produto_badge_promo">-10%</div>
 
                     <div class="produto_img">
-                        <img src="" alt="Produto">
+                        <img src="img/img_produtos/violao1.png" alt="Produto">
                     </div>
 
                     <div class="produto_info">
                         <span class="produto_nome">Pedal Overdrive</span>
                         <span class="produto_preco">
-                            <span class="produto_preco_antigo">R$ 399,00</span>
-                            <span class="produto_preco_novo">R$ 319,00</span>
+                            <span class="produto_preco_antigo">R$2.399,00</span>
+                            <span class="produto_preco_novo">R$ 2.119,00</span>
                         </span>
 
                         <div class="produto_pagamento">
@@ -111,19 +111,19 @@
                     <div class="produto_badge produto_badge_novo">NOVO</div>
 
                     <div class="produto_img">
-                        <img src="" alt="Produto">
+                        <img src="img/img_produtos/bateria2.png" alt="Produto">
                     </div>
 
                     <div class="produto_info">
                         <span class="produto_nome">Microfone Condensador</span>
-                        <span class="produto_preco">R$ 489,00</span>
+                        <span class="produto_preco">R$ 4.089,00</span>
 
                         <div class="produto_pagamento">
                             <span class="produto_parcelado">
                                 EM ATÉ 10X SEM JUROS
                             </span>
                             <span class="produto_pix">
-                                R$ 1.181,50 À VISTA NO PIX
+                                R$ 4.000,50 À VISTA NO PIX
                             </span>
                         </div>
                     </div>
@@ -146,59 +146,59 @@
 
             <div class="marcas_lista" id="marcasScroll" aria-label="Marcas">
                 <a class="marca_item" href="#">
-                    <img src="marcas/casio.png" height="120px" width="auto">
+                    <img src="img/marcas/casio.png" height="120px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/tagima.png" height="40px" width="auto">
+                    <img src="img/marcas/tagima.png" height="40px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/yamaha.png" height="40px" width="auto">
+                    <img src="img/marcas/yamaha.png" height="40px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/akg.png" height="100px" width="auto">
+                    <img src="img/marcas/akg.png" height="100px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/crafter.png" height="100px" width="auto">
+                    <img src="img/marcas/crafter.png" height="100px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/giannini.png" height="130px" width="auto">
+                    <img src="img/marcas/giannini.png" height="130px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/frahm.png" height="50px" width="auto">
+                    <img src="img/marcas/frahm.png" height="50px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/borne.png" height="50px" width="auto">
+                    <img src="img/marcas/borne.png" height="50px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/takamine.png" height="60px" width="auto">
+                    <img src="img/marcas/takamine.png" height="60px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/behringer.png" height="60px" width="auto">
+                    <img src="img/marcas/behringer.png" height="60px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/jbl.png" height="80px" width="auto">
+                    <img src="img/marcas/jbl.png" height="80px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/shure.png" height="40px" width="auto">
+                    <img src="img/marcas/shure.png" height="40px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/michael.png" height="100px" width="auto">
+                    <img src="img/marcas/michael.png" height="100px" width="auto">
                 </a>
 
                 <a class="marca_item" href="#">
-                    <img src="marcas/kadosh.png" height="50px" width="auto">
+                    <img src="img/marcas/kadosh.png" height="50px" width="auto">
                 </a>
             </div>
 

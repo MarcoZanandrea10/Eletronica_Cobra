@@ -107,7 +107,7 @@
 
                 <!-- depois add foto da equipe aqui -->
                 <div class="equipe_foto">
-                    <img src="<?= $base ?>/img_padrao/equipe.jpg" alt="Foto da equipe">
+                    <img src="<?= $base ?>/img/img_padrao/equipe.jpg" alt="Foto da equipe">
                 </div>
             </div>
         </section>

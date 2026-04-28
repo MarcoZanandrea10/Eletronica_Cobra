@@ -7,7 +7,7 @@
     <title>Eletronica Cobra</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img_padrao/mascote_cobra.png">
+    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;
@@ -173,7 +173,7 @@
                 </div>
 
                 <div class="ambiente_foto_principal">
-                    <img src="<?= $base ?>/img_padrao/ambiente_loja_1.jpg" alt="Foto da loja">
+                    <img src="<?= $base ?>/img/img_padrao/ambiente_loja_1.jpg" alt="Foto da loja">
                 </div>
             </div>
         </section>
@@ -188,23 +188,23 @@
 
                 <div class="ambiente_fotos_grid">
                     <div class="ambiente_foto ambiente_foto_grande">
-                        <img src="<?= $base ?>/img_padrao/ambiente2.jpg" alt="Foto da loja">
+                        <img src="<?= $base ?>/img/img_padrao/ambiente2.jpg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img_padrao/ambiente3.jpg" alt="Foto da loja">
+                        <img src="<?= $base ?>/img/img_padrao/ambiente3.jpg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img_padrao/ambiente4.jpg" alt="Foto da loja">
+                        <img src="<?= $base ?>/img/img_padrao/ambiente4.jpg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img_padrao/ambiente5.jpg" alt="Foto da loja">
+                        <img src="<?= $base ?>/img/img_padrao/ambiente5.jpg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img_padrao/ambiente6.jpg" alt="Foto da loja">
+                        <img src="<?= $base ?>/img/img_padrao/ambiente6.jpg" alt="Foto da loja">
                     </div>
                 </div>
             </div>

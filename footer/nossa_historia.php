@@ -7,7 +7,7 @@
     <title>Eletrônica Cobra</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img_padrao/mascote_cobra.png">
+    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="historia_foto">
-                    <img src="../img/img_padrao/foto_antiga_cobra_1.jpg" alt="Foto Eletrônica Cobra">
+                    <img src="../img/img_footer/loja1.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
 
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="historia_foto">
-                    <img src="../img/img_padrao/foto_antiga_cobra_2.jpg" alt="Foto Eletrônica Cobra">
+                    <img src="../img/img_footer/loja2.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
 
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="historia_foto">
-                    <img src="../img/img_padrao/foto_atual_cobra.jpg" alt="Foto Eletrônica Cobra">
+                    <img src="../img/img_footer/loja3.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
         </section>

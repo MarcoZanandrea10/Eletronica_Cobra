@@ -7,7 +7,7 @@
     <title>Eletronica Cobra</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img_padrao/mascote_cobra.png">
+    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;

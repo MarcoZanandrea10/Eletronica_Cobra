@@ -173,7 +173,7 @@
                 </div>
 
                 <div class="ambiente_foto_principal">
-                    <img src="<?= $base ?>/img/img_padrao/ambiente_loja_1.jpg" alt="Foto da loja">
+                    <img src="../img/img_footer/frente-loja.jpeg" alt="Foto da loja">
                 </div>
             </div>
         </section>
@@ -188,23 +188,23 @@
 
                 <div class="ambiente_fotos_grid">
                     <div class="ambiente_foto ambiente_foto_grande">
-                        <img src="<?= $base ?>/img/img_padrao/ambiente2.jpg" alt="Foto da loja">
+                        <img src="../img/img_footer/lateral-loja.jpg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img/img_padrao/ambiente3.jpg" alt="Foto da loja">
+                        <img src="../img/img_footer/caixas-loja.jpeg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img/img_padrao/ambiente4.jpg" alt="Foto da loja">
+                        <img src="../img/img_footer/gaitas-loja.jpeg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img/img_padrao/ambiente5.jpg" alt="Foto da loja">
+                        <img src="../img/img_footer/bateria-loja.jpeg" alt="Foto da loja">
                     </div>
 
                     <div class="ambiente_foto">
-                        <img src="<?= $base ?>/img/img_padrao/ambiente6.jpg" alt="Foto da loja">
+                        <img src="../img/img_footer/violao-loja.jpeg" alt="Foto da loja">
                     </div>
                 </div>
             </div>

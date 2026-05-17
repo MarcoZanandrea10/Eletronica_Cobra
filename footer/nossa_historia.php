@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletrônica Cobra</title>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
+    <base href="../">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
+    <link rel="icon" href="img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;
@@ -109,7 +110,7 @@
 
     <main class="historia">
         <section class="historia_margens">
-            <div class="historia_topo">
+            <div class="historia_topo animar animar_preparado animar_cima">
                 <span class="historia_subtitulo">Nossa história</span>
                 <h1>Eletrônica Cobra</h1>
                 <p>
@@ -119,7 +120,7 @@
             </div>
 
             <div class="historia_linha">
-                <div class="historia_texto">
+                <div class="historia_texto animar animar_preparado animar_esquerda">
                     <h2>O começo de uma trajetória musical</h2>
 
                     <p>
@@ -133,13 +134,13 @@
                     </p>
                 </div>
 
-                <div class="historia_foto">
-                    <img src="../img/img_footer/loja1.jpeg" alt="Foto Eletrônica Cobra">
+                <div class="historia_foto animar animar_preparado animar_direita delay-1">
+                    <img src="img/img_footer/loja1.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
 
             <div class="historia_linha historia_linha_invertida">
-                <div class="historia_texto">
+                <div class="historia_texto animar animar_preparado animar_direita">
                     <h2>Crescendo junto com a região</h2>
 
                     <p>
@@ -154,13 +155,13 @@
                     </p>
                 </div>
 
-                <div class="historia_foto">
-                    <img src="../img/img_footer/loja2.jpeg" alt="Foto Eletrônica Cobra">
+                <div class="historia_foto animar animar_preparado animar_esquerda delay-1">
+                    <img src="img/img_footer/loja2.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
 
             <div class="historia_linha">
-                <div class="historia_texto">
+                <div class="historia_texto animar animar_preparado animar_esquerda">
                     <h2>Mais de quatro décadas de confiança</h2>
 
                     <p>
@@ -174,14 +175,16 @@
                     </p>
                 </div>
 
-                <div class="historia_foto">
-                    <img src="../img/img_footer/loja3.jpeg" alt="Foto Eletrônica Cobra">
+                <div class="historia_foto animar animar_preparado animar_direita delay-1">
+                    <img src="img/img_footer/loja3.jpeg" alt="Foto Eletrônica Cobra">
                 </div>
             </div>
         </section>
     </main>
 
     <?php require __DIR__ . '/footer.php'; ?>
+
+    <script src="styles/animacoes.js"></script>
 </body>
 
 </html>

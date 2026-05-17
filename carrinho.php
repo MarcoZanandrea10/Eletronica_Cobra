@@ -1,5 +1,5 @@
 <?php
-$base = $base ?? '/Cobra';
+// $base = $base ?? '/Cobra';
 $modoCarrinho = $modoCarrinho ?? 'pagina';
 
 // simulação de itens no carrinho
@@ -9,21 +9,21 @@ $itensCarrinho = [
         'preco' => 899.90,
         'preco_pix' => 854.90,
         'quantidade' => 1,
-        'imagem' => $base . '/img/img_produtos/guitarra1.png'
+        'imagem' => './img/img_produtos/guitarra1.png'
     ],
     [
         'nome' => 'Guitarra Gibson Les Paul',
         'preco' => 1199.90,
         'preco_pix' => 1139.90,
         'quantidade' => 1,
-        'imagem' => $base . '/img/img_produtos/guitarra2.png'
+        'imagem' => './img/img_produtos/guitarra2.png'
     ],
     [
         'nome' => 'Bateria Pearl Export',
         'preco' => 649.90,
         'preco_pix' => 617.40,
         'quantidade' => 1,
-        'imagem' => $base . '/img/img_produtos/bateria1.png'
+        'imagem' => './img/img_produtos/bateria1.png'
     ],
 ];
 
@@ -64,7 +64,7 @@ foreach ($itensCarrinho as $item) {
                 <?php if ($carrinhoVazio): ?>
                     <div class="container_car_vazio_lateral">
                         <div class="icon_carrinho">
-                            <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
+                            <img src="./icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
                         </div>
 
                         <h3>Seu carrinho está vazio</h3>
@@ -219,7 +219,7 @@ foreach ($itensCarrinho as $item) {
                     <section class="container_car_vazio">
                         <div class="car_vazio_box">
                             <div class="icon_carrinho">
-                                <img src="<?= $base ?>/icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
+                                <img src="./icons/carrinho_vermelho.png" alt="Ícone do carrinho" width="40" height="40">
                             </div>
 
                             <h2>Seu carrinho está vazio</h2>

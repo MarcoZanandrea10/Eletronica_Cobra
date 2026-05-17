@@ -1,4 +1,4 @@
-<?php $base = '/Cobra'; ?>
+<!-- <?php $base = '/Cobra'; ?> -->
 
 <?php
 $pagina_atual = isset($_GET['pagina']) ? intval($_GET['pagina']) : 1;
@@ -196,9 +196,9 @@ $produtos_pagina = array_slice($produtos_filtrados, $inicio, $limite_por_pagina)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletronica Cobra</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="<?= $base; ?>/styles/produtos.css">
-    <link rel="icon" href="<?= $base; ?>/img/img_padrao/mascote_cobra.png">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/produtos.css">
+    <link rel="icon" href="./img/img_padrao/mascote_cobra.png">
 </head>
 
 

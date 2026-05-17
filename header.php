@@ -1,4 +1,4 @@
-<?php $base = '/Cobra'; ?>
+<!-- <?php $base = '/Cobra'; ?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,9 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= $base ?>/styles/index.css">
-    <link rel="stylesheet" href="<?= $base ?>/styles/animacoes.css">
-    <link rel="stylesheet" href="<?= $base; ?>/styles/carrinho.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/carrinho.css">
 </head>
 
 <body>
@@ -20,25 +19,25 @@
         </div>
 
         <div class="header_container">
-            <a class="logo" href="<?= $base ?>/index.php">
+            <a class="logo" href="./index.php">
                 <div>
-                    <img src="<?= $base ?>/img/img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60" height="60">
+                    <img src="./img/img_padrao/mascote_cobra.png" alt="Logo Eletronica Cobra" width="60" height="60">
                 </div>
             </a>
 
             <div class="barra_pesquisa">
                 <div class="box_pesquisa">
-                    <img src="<?= $base ?>/icons/lupa.png" alt="Ícone de lupa" class="icon_pesquisa" width="20" height="20">
+                    <img src="./icons/lupa.png" alt="Ícone de lupa" class="icon_pesquisa" width="20" height="20">
                     <input type="text" placeholder="Buscar guitarras, baterias, teclados...">
                 </div>
             </div>
 
             <div class="menu">
                 <nav class="nav">
-                    <a href="<?= $base ?>/index.php">Início</a>
+                    <a href="./index.php">Início</a>
 
                     <div class="nav_produtos" id="navProdutos">
-                        <button class="nav_produtos_btn" type="button" onclick="window.location.href='<?= $base ?>/produtos.php'">Produtos</button>
+                        <button class="nav_produtos_btn" type="button" onclick="window.location.href='./produtos.php'">Produtos</button>
 
                         <div class="mega_menu">
                             <div class="mega_menu_conteudo">
@@ -146,17 +145,17 @@
                         </div>
                     </div>
 
-                    <a href="<?= $base ?>/index.php#sobre">Sobre</a>
-                    <a href="<?= $base ?>/index.php#contato">Contato</a>
+                    <a href="./index.php#sobre">Sobre</a>
+                    <a href="./index.php#contato">Contato</a>
                 </nav>
 
-                <a href="<?= $base ?>/carrinho.php" class="btn_header" id="abrirCarrinho">
-                    <img src="<?= $base ?>/icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
+                <a href="./carrinho.php" class="btn_header" id="abrirCarrinho">
+                    <img src="./icons/carrinho.png" alt="Ícone do carrinho" width="20" height="20">
                     Carrinho
                 </a>
 
                 <a class="btn_header">
-                    <img src="<?= $base ?>/icons/login.png" alt="Ícone do login" width="20" height="20">
+                    <img src="./icons/login.png" alt="Ícone do login" width="20" height="20">
                 </a>
             </div>
         </div>

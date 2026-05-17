@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletronica Cobra</title>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
+    <base href="../">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
+    <link rel="icon" href="img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;
@@ -152,14 +153,14 @@
     <main class="ambiente">
         <section class="ambiente_topo">
             <div class="ambiente_margens">
-                <span class="ambiente_subtitulo">ELETRÔNICA COBRA</span>
-                <h1>Nosso Ambiente</h1>
+                <span class="ambiente_subtitulo animar animar_preparado animar_cima">ELETRÔNICA COBRA</span>
+                <h1 class="animar animar_preparado animar_cima delay-1">Nosso Ambiente</h1>
             </div>
         </section>
 
         <section class="ambiente_intro">
             <div class="ambiente_margens ambiente_intro_grid">
-                <div class="ambiente_intro_texto">
+                <div class="ambiente_intro_texto animar animar_preparado animar_esquerda">
                     <h2>Um espaço feito para músicos e apaixonados por som</h2>
                     <p>
                         Na Eletrônica Cobra, buscamos oferecer muito mais do que produtos.
@@ -172,39 +173,39 @@
                     </p>
                 </div>
 
-                <div class="ambiente_foto_principal">
-                    <img src="../img/img_footer/frente-loja.jpeg" alt="Foto da loja">
+                <div class="ambiente_foto_principal animar animar_preparado animar_direita delay-1">
+                    <img src="img/img_footer/frente-loja.jpeg" alt="Foto da loja">
                 </div>
             </div>
         </section>
 
         <section class="ambiente_galeria">
             <div class="ambiente_margens">
-                <div class="ambiente_titulo_bloco">
+                <div class="ambiente_titulo_bloco animar animar_preparado animar_cima">
                     <span>CONHEÇA A LOJA</span>
                     <h2>Alguns espaços do nosso ambiente</h2>
                     <p>Um pouco da estrutura, dos detalhes e da atmosfera da Eletrônica Cobra.</p>
                 </div>
 
                 <div class="ambiente_fotos_grid">
-                    <div class="ambiente_foto ambiente_foto_grande">
-                        <img src="../img/img_footer/lateral-loja.jpg" alt="Foto da loja">
+                    <div class="ambiente_foto ambiente_foto_grande animar animar_preparado animar_cima">
+                        <img src="img/img_footer/lateral-loja.jpg" alt="Foto da loja">
                     </div>
 
-                    <div class="ambiente_foto">
-                        <img src="../img/img_footer/caixas-loja.jpeg" alt="Foto da loja">
+                    <div class="ambiente_foto animar animar_preparado animar_cima delay-1">
+                        <img src="img/img_footer/caixas-loja.jpeg" alt="Foto da loja">
                     </div>
 
-                    <div class="ambiente_foto">
-                        <img src="../img/img_footer/gaitas-loja.jpeg" alt="Foto da loja">
+                    <div class="ambiente_foto animar animar_preparado animar_cima delay-2">
+                        <img src="img/img_footer/gaitas-loja.jpeg" alt="Foto da loja">
                     </div>
 
-                    <div class="ambiente_foto">
-                        <img src="../img/img_footer/bateria-loja.jpeg" alt="Foto da loja">
+                    <div class="ambiente_foto animar animar_preparado animar_cima delay-3">
+                        <img src="img/img_footer/bateria-loja.jpeg" alt="Foto da loja">
                     </div>
 
-                    <div class="ambiente_foto">
-                        <img src="../img/img_footer/violao-loja.jpeg" alt="Foto da loja">
+                    <div class="ambiente_foto animar animar_preparado animar_cima delay-4">
+                        <img src="img/img_footer/violao-loja.jpeg" alt="Foto da loja">
                     </div>
                 </div>
             </div>
@@ -212,6 +213,8 @@
     </main>
 
     <?php require __DIR__ . '/footer.php'; ?>
+
+    <script src="styles/animacoes.js"></script>
 </body>
 
 </html>

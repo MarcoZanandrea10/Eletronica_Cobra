@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eletronica Cobra</title>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/animacoes.css">
-    <link rel="icon" href="../img/img_padrao/mascote_cobra.png">
+    <base href="../">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
+    <link rel="icon" href="img/img_padrao/mascote_cobra.png">
     <style>
         :root {
             --vermelho: #ED1C24;
@@ -90,13 +91,13 @@
     <main class="equipe">
         <section class="equipe_topo">
             <div class="equipe_margens">
-                <h1>Nossa Equipe</h1>
+                <h1 class="animar animar_preparado animar_cima">Nossa Equipe</h1>
             </div>
         </section>
 
         <section class="equipe_intro">
             <div class="equipe_margens">
-                <div class="equipe_intro_texto">
+                <div class="equipe_intro_texto animar animar_preparado animar_cima delay-1">
                     <h2>Quem faz a Eletrônica Cobra acontecer</h2>
                     <p>
                         Nossa equipe é formada por pessoas que vivem a música no dia a dia e atendem cada cliente 
@@ -106,14 +107,16 @@
                 </div>
 
                 <!-- depois add foto da equipe aqui -->
-                <div class="equipe_foto">
-                    <img src="<?= $base ?>/img/img_padrao/equipe.jpg" alt="Foto da equipe">
+                <div class="equipe_foto animar animar_preparado animar_cima delay-2">
+                    <img src="img/img_padrao/equipe.jpg" alt="Foto da equipe">
                 </div>
             </div>
         </section>
     </main>
 
     <?php require __DIR__ . '/footer.php'; ?>
+
+    <script src="styles/animacoes.js"></script>
 </body>
 
 </html>

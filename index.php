@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<!-- testeeeeeeeeeeeeeeeeeeeeeeeee hoje agora -->
 
 <head>
     <meta charset="UTF-8">
@@ -249,22 +248,22 @@
                         <img src="icons/coracao.png" alt="Ícone de Coração" width="30" height="30">
                     </div>
                     <h3 class="beneficio_titulo">Paixão</h3>
-                    <p class="beneficio_texto">Atendimento feito por músicos<br>para músicos</p>
+                    <p class="beneficio_texto">Atendimento feito de músicos<br>para músicos</p>
                 </div>
             </div>
 
             <div class="sobre_amp animar animar_preparado animar_baixo delay-2">
                 <div class="amp_grade">
                     <div class="amp_item">
-                        <div class="amp_num"><span class="amp_red">40</span>+</div>
+                        <div class="amp_num"><span class="amp_red">43</span>+</div>
                         <div class="amp_label">Anos de Experiência</div>
                     </div>
                     <div class="amp_item">
-                        <div class="amp_num"><span class="amp_red">5000</span>+</div>
+                        <div class="amp_num"><span class="amp_red">50.000</span>+</div>
                         <div class="amp_label">Clientes Satisfeitos</div>
                     </div>
                     <div class="amp_item">
-                        <div class="amp_num"><span class="amp_red">1000</span>+</div>
+                        <div class="amp_num"><span class="amp_red">2.000</span>+</div>
                         <div class="amp_label">Produtos em Estoque</div>
                     </div>
                 </div>
